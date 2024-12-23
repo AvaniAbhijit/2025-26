@@ -1,4 +1,4 @@
-#Read the turlte documentation and move turtle forward using forward command.
+#Read the turtle documentation and move turtle forward using forward command.
 #Use the right angle to turn the turtle
 from turtle import Turtle
 t = Turtle()
