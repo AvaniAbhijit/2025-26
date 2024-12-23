@@ -1,4 +1,4 @@
-
+#Explain how function works here.
 from turtle import Turtle
 t= Turtle()
 def draw(num_sides):
