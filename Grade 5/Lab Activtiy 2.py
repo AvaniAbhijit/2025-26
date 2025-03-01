@@ -1,4 +1,7 @@
-#Task: Change food coordinates - write the code for todo below
+# Move the food object in the snake game
+# ✅ move it horizontally left
+# ✅ move it vertically down.
+
 
 import turtle
 
@@ -19,7 +22,3 @@ food = turtle.Turtle()
 food.shape("circle")
 food.color("red")
 
-#todo: move the food left by 110 pixels
-
-
-#todo: move the food down by 80 pixels
