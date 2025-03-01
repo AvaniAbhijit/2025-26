@@ -1,4 +1,5 @@
-#Move the snake head without drawing
+
+#Change head coordinates
 
 import turtle
 
@@ -10,7 +11,7 @@ t.setup(width=600, height=600)
 
 # Snake Head
 head = turtle.Turtle()
-head.shape("arrow")
+head.shape("square")
 head.color("black")
 
 #penup() - helps head turtle to move to (0,100) without drawing a line
@@ -21,7 +22,9 @@ head.goto(0,100)
 food = turtle.Turtle()
 food.shape("circle")
 food.color("red")
-food.goto(100,0)
+
+
+
 
 
 
