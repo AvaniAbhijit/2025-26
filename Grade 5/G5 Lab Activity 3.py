@@ -26,12 +26,8 @@ food = turtle.Turtle()
 food.shape("circle")
 food.color("red")
 
-
-
-food.goto(100,0)
-
 #todo: make the food size smaller by 0.75 times using shapesize()
 #Hint: food.shapesize(width, height). By default, the shapesize is (1,1).
 
 
-
+food.goto(100,0)
