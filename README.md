@@ -12,4 +12,4 @@ At the end of each chapter, we have a challenge activity to help you create anot
 Paddle Ball Game - based on the concepts learned in that chapter. 
 This will reinforce your learning while creating another interactive game all by yourself.
 
-<img src="image_url" width="150">
+<img src="https://github.com/AvaniAbhijit/2025-26/blob/main/Grade%205/Paddle%20Ball%20Game%20Output.png" width="150">
