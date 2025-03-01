@@ -1,4 +1,9 @@
-#Task: - write the code for todo below
+# Lab Activity 3
+# Change the following for the food object:
+# ✅ move the food with penup()
+# ✅ change the speed of the food object. 
+# ✅ make the food size smaller using shapesize(0.85, 0.85). 
+# Note: Syntax: shapesize(height, width). By default, the shapesize is (1,1). 
 
 import turtle
 
@@ -21,9 +26,7 @@ food = turtle.Turtle()
 food.shape("circle")
 food.color("red")
 
-#todo: change the speed of the food object
 
-#todo: make the food move without drawing a line
 
 food.goto(100,0)
 
