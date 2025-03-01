@@ -1,3 +1,4 @@
+# Lab Activity 2
 # Move the food object in the snake game
 # ✅ move it horizontally left
 # ✅ move it vertically down.
