@@ -1,5 +1,5 @@
 
-#Change head coordinates
+# Move the head without drawing a line 
 
 import turtle
 
