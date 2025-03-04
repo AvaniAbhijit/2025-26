@@ -1,6 +1,7 @@
 # What is speed in turtle?
 # We can control the speed at which the turtle moves using the speed() function. 
-# Speed ranges from 0 (fastest), 1 (slowest) to 10 (very fast). Change the speed of the turtle and observe the change.
+# Speed ranges from 0 (fastest), 1 (slowest) to 10 (very fast). 
+# Change the speed of the turtle and observe the change.
 
 import turtle
 
