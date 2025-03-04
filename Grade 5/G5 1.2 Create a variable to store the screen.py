@@ -4,7 +4,7 @@
 # Why do we use variables?
 # We use variables so we can store information and use it later in our programs. 
 
-# Task: Change the variable "t" to "t1".
+# Task: Change the variable name.
 
 
 import turtle  # Import the turtle module, which provides graphics functions for drawing.
