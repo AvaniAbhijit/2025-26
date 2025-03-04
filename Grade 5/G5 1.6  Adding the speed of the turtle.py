@@ -3,6 +3,8 @@
 # Speed ranges from 0 (fastest), 1 (slowest) to 10 (very fast). 
 # Change the speed of the turtle and observe the change.
 
+#Task: Change the turtle speed to 1.
+
 import turtle
 
 # turtle screen functions
