@@ -1,4 +1,12 @@
-#Event handling with Keys
+# What is Event handling?
+# Event handling is making the computer respond when you press a key, 
+# click the mouse, or do an action.
+
+# Why are we using event handling in this game?
+# To move the snake head using the keyboard key. turtle.listen()
+# It makes sure the program is ready to detect key presses. : turtle.onkey() 
+# t.onkey(function_name, "Key") binds a key press to a function. 
+# Function_name is the name of the function that is called when a particular “Key” is pressed
 
 import turtle
 
