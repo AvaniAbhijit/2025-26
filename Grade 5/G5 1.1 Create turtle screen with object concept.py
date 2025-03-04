@@ -1,5 +1,5 @@
 # Task: Change the background color to red.
-# Question: What is a turtle?
+# Question: Where have we created the object in the below code?
 
 import turtle  # Import the turtle module, which provides graphics functions for drawing.
 
