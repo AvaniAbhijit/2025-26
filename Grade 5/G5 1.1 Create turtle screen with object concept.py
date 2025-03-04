@@ -5,7 +5,7 @@
 # In Python's turtle module, an object is like a real turtle(turtle.screen()) that you can control on the screen 
 # and set attributes like title, bgcolor, and setup.
 
-# Task: Change the properties( title,bgcolor,and setup) of the object in the below code.
+# Task: Change the attributes( title,bgcolor,and setup) of the object in the below code.
 
 
 import turtle  # Import the turtle module, which provides graphics functions for drawing.
