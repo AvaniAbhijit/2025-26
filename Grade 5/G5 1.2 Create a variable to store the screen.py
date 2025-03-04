@@ -1,3 +1,9 @@
+# What is a Variable?
+# A variable is like a box that holds information. This box has a name, and you can put different things inside it, like numbers, words, or even lists of things.
+
+# Why do we use variables?
+# We use variables so we can store information and use it later in our programs. 
+
 # Task: Change the variable "t" to "t1".
 
 
