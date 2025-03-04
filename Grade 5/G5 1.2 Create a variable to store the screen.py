@@ -1,5 +1,5 @@
-# Task: Change the variable name "t" to "t1".
-#Quetion: What is a variable?
+# Task: Change the variable "t" to "t1".
+
 
 import turtle  # Import the turtle module, which provides graphics functions for drawing.
 
