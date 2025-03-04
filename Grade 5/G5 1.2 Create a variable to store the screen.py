@@ -1,3 +1,6 @@
+# Task: Change the variable name "t" to "t1".
+#Quetion: What is a variable?
+
 import turtle  # Import the turtle module, which provides graphics functions for drawing.
 
 # Create a screen object using the turtle.Screen() function and assign it to variable 't'.
