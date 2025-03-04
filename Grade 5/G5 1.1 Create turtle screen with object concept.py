@@ -1,3 +1,6 @@
+# Task: Change the screen color to red.
+# Question: What is a turtle?
+
 import turtle  # Import the turtle module, which provides graphics functions for drawing.
 
 # turtle.Screen() creates and returns a screen object, which is used to control the window.
