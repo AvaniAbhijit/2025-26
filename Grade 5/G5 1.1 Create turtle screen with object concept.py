@@ -2,7 +2,7 @@
 # An object is a thing that has attributes (features) and functions (actions it can perform).
 
 # What is an Object in a Turtle? 
-# In Python's turtle module, an object is like a real turtle(turtle.screen() that you can control on the screen 
+# In Python's turtle module, an object is like a real turtle(turtle.screen()) that you can control on the screen 
 # and set attributes like title, bgcolor, and setup.
 
 # Task: Change the properties( title,bgcolor,and setup) of the object in the below code.
