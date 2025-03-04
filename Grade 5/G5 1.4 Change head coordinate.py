@@ -1,4 +1,8 @@
-#Change head coordinates
+# How does the turtle move?
+# The goto(x, y) function in the turtle module moves the turtle directly to a specific position on the screen using coordinates (X, Y). 
+# Example: turtle.goto(100,50) moves the turtle right to X = 100 and up to Y = 50
+# turtle.goto(-50,-100) moves the turtle left to X = -50 and down to Y = -100. Line 21 move the head turtle 100 pixels up along the Y coordinate 
+
 
 import turtle
 
