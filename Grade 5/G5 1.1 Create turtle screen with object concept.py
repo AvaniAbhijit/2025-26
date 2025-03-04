@@ -1,4 +1,4 @@
-# Task: Change the screen color to red.
+# Task: Change the background color to red.
 # Question: What is a turtle?
 
 import turtle  # Import the turtle module, which provides graphics functions for drawing.
