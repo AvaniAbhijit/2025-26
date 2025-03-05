@@ -2,10 +2,11 @@
 # Age and Msg are the variables that store the value.
 # The variable must not have a space in between.
 # The variable must not start with a number.
+# The variable must not have special characters except _.
 
 
-# Task 1 - Uncomment lines 15 and 16 and run the code.
-# Task 2 - Correct the code lines 15 and 16 and run the code.
+# Task 1 - Uncomment lines 16 and 17 and run the code.
+# Task 2 - Correct the code lines 16 and 17 and run the code.
 
 Age = 12
 Msg = "Happy Birthday"
