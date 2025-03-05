@@ -1,4 +1,15 @@
-#Functions for event handling
+#What is a function?
+# A function is like a block of code that tells the turtle what to do. 
+# This block of code runs only when the function is called
+# following syntax:
+# def function_name():
+       # block of code within the function 
+# ✅ def is used to define a function. Observe the brackets and colon after the function name.
+# ✅ Observe the indentation of the code within the function.
+
+
+Task - 
+
 
 import turtle
 
