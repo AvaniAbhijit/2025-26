@@ -1,6 +1,6 @@
-#Python help us to draw shapes using python turtle module
+# The Python turtle module can be used to draw pictures, shapes, and designs on the screen!
 
-#Task : Run the code and see the output.
+#Task: Run the code and see the output.
 import turtle
 
 # Create turtle object
