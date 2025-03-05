@@ -1,5 +1,5 @@
 # Python variable used to store the value.
-# Age and Msg are the variables that store the value.
+# Age and Msg are the variables in the below code that store the value.
 # The variable must not have a space in between.
 # The variable must not start with a number.
 # The variable must not have special characters except _.
