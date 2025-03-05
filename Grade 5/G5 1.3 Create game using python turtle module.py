@@ -1,3 +1,7 @@
+# The Python turtle module can be used to make games.
+
+#Task: Run the code and see the output.
+
 import turtle
 import time
 import random
