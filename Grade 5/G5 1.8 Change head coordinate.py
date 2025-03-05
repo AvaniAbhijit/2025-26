@@ -1,5 +1,4 @@
-# turtle.goto(0,100) moves the turtle up to Y = 50
-# Line 21 moves the head turtle 100 pixels up along the Y coordinate 
+# turtle.goto(0,100) moves the turtle up to Y = 100 on line 20.
 
 # Task: Change the head position to -50 for the x-axis and 200 for the y-axis.
 
