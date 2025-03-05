@@ -1,7 +1,7 @@
 # Lab Activity 3
 # Change the following for the food object:
-# ✅ move the food with penup() 
 # ✅ make the food size smaller using shapesize(0.85, 0.85). 
+
 # Note: Syntax: shapesize(height, width). By default, the shapesize is (1,1). 
 
 import turtle
