@@ -1,7 +1,8 @@
 # def is a keyword that we use to define the function.
-# addition is a function name here,
-# a, b are a value or parameter
-# Observe the indentation(spacing) of the code within the function on line no. 10.
+# addition is a function name here, a, b are a value or parameter.
+# Observe the indentation(spacing) of the code within the function on line no. 11.
+
+# Observe lines no. 13 and 14, same function called with different values.
 
 #Task 1: Uncomment lines 15 & 16 and fix the error.
 #Task 2: Call function subtraction with 156 and 100
