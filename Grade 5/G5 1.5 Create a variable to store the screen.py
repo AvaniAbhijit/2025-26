@@ -1,10 +1,11 @@
 # What is a Variable?
-# A variable is like a box that holds information. This box has a name, and you can put different things inside it, like numbers, words, or even lists of things.
+# On line 13, t is a variable that is used to store the turtle.Screen() object.
 
 # Why do we use variables?
 # We use variables so we can store information and use it later in our programs. 
+# Such as we used t later on line 17 and so on.
 
-# Task: Change the variable name.
+# Task: Change the variable name t to "t1".
 
 
 import turtle  # Import the turtle module, which provides graphics functions for drawing.
