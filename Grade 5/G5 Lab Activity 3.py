@@ -27,5 +27,5 @@ food.color("red")
 #todo: make the food size smaller by 0.75 times using shapesize()
 #Hint: food.shapesize(width, height). By default, the shapesize is (1,1).
 
-
+food.penup()
 food.goto(100,0)
