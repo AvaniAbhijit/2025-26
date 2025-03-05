@@ -1,7 +1,7 @@
 # Lab Activity 2
 # Move the food object in the snake game
-# ✅ move it horizontally left
-# ✅ move it vertically down.
+# ✅ for x axis 100
+# ✅ for y axis- -50
 
 
 import turtle
