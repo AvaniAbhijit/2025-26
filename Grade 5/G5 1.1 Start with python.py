@@ -3,6 +3,8 @@
 # and give it instructions. We can use Python to make games, solve math problems,
 # and even create animations and patterns with the help of Python module.
 
+print(3+2)
+
 # What is Turtle in Python?
 # Turtle is a module in Python that lets us make games and draw pictures and
 # shapes with patterns on the screen.
