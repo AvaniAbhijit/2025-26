@@ -4,8 +4,8 @@
 # The variable must not start with a number.
 
 
-# Task 1 - Uncomment lines 12 and 13 and run the code.
-# Task 2 - Correct the code lines 12 and 13 and run the code.
+# Task 1 - Uncomment lines 15 and 16 and run the code.
+# Task 2 - Correct the code lines 15 and 16 and run the code.
 
 Age = 12
 Msg = "Happy Birthday"
