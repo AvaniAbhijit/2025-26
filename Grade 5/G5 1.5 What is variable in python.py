@@ -1,8 +1,11 @@
-# Python variable use to store the value.
-# Age and Msg are the variable which is storing the value.
+# Python variable used to store the value.
+# Age and Msg are the variables that store the value.
+# The variable must not have a space in between.
+# The variable must not start with a number.
 
-# Task 1 - Uncomment the line 17 and 18 and run the code.
-# Task 2 - Correct the code line 17 and 18 and run the code.
+
+# Task 1 - Uncomment lines 12 and 13 and run the code.
+# Task 2 - Correct the code lines 12 and 13 and run the code.
 
 Age = 12
 Msg = "Happy Birthday"
