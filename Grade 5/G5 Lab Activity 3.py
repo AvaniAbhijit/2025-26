@@ -1,7 +1,6 @@
 # Lab Activity 3
 # Change the following for the food object:
-# ✅ move the food with penup()
-# ✅ change the speed of the food object. 
+# ✅ move the food with penup() 
 # ✅ make the food size smaller using shapesize(0.85, 0.85). 
 # Note: Syntax: shapesize(height, width). By default, the shapesize is (1,1). 
 
@@ -17,7 +16,6 @@ t.setup(width=600, height=600)
 head = turtle.Turtle()
 head.shape("square")
 head.color("black")
-head.speed(0)
 head.penup()
 head.goto(0,100)
 
