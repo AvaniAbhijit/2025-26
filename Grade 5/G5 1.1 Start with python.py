@@ -1,18 +1,22 @@
-# What is Python?
-# Python is a computer language that helps us talk to the computer
-# and give it instructions. We can use Python to make games, solve math problems,
-# and even create animations and patterns with the help of Python module.
+# Python helps us print a one-line statement.
+print("Hello, students!")
 
-print(3+2)
+# Python helps us print multiple lines.
+print("Welcome to our Python class.")
+print("Let's learn to code!")
 
-# What is Turtle in Python?
-# Turtle is a module in Python that lets us make games and draw pictures and
-# shapes with patterns on the screen.
+# Python solves math problems.
+print(5 + 6)  # Addition example
 
-# What is a module?
-# A module in Python is like a toolbox that has ready-made tools (codes) to help us do different tasks.
-# We use a module by writing import command.
+# Task 1: Multiply two numbers (e.g., 7 and 3) and display the result using print().
+print(7*3)  # Example solution (students should try with their numbers)
 
-import turtle # Import the turtle module, which provides graphics functions for drawing.
+# Task 2: Substract two numbers and display the result using print().
+
+
+
+
+
+
 
 
