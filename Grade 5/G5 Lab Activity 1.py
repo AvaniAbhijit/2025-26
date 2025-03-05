@@ -1,8 +1,8 @@
 #Lab Activity 1:
-#Create a food object for the snake game. The food should:
-#✅ Be a new turtle object with the name of food.
-#✅ Have a circle shape
-#✅ Be red in colour
+#Create a food object for the snake game.
+#✅ Create a new turtle object with the variable name food.
+#✅ food.shape will be circle
+#✅ food.color will be red
 
 
 import turtle
