@@ -1,5 +1,5 @@
 # Lab Activity 2
-# Move the food object in the snake game
+# Move the food object in the snake game using goto() on line no 25.
 # ✅ for x axis 100
 # ✅ for y axis- -50
 
