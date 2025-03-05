@@ -1,6 +1,5 @@
-# We can use the following functions of the turtle to solve the above problem of not drawing while moving the turtle to a different position. 
-# penup() 🖊️ (Pick up the pen) – The turtle moves without drawing.
-# pendown() 🖊️ (Put the pen down) – The turtle starts drawing again.
+# penup() function of turtle on line 20 helps head turtle to move to (0,100) without drawing a line
+
 
 # Task: Move the food without drawing a line 
 
