@@ -1,7 +1,7 @@
-# penup() function of turtle on line 20 helps head turtle to move to (0,100) without drawing a line
+# penup() function of turtle on line 20 helps head turtle to move to (0,100) without drawing a line.
 
 
-# Task: Move the food without drawing a line 
+# Task: Move the food object using goto(100,100) and for without drawing a line using penup() function of turtle.. 
 
 import turtle
 
