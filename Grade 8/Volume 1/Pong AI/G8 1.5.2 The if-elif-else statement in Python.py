@@ -1,7 +1,7 @@
 # The elif (else if) block is used when there are multiple conditions.
 
-# Task : Write the code to add one more codition -
-# to check marks>=65 to print("Grade C") else print("Grade D").
+# Task: Write the code to add one more condition -
+# to check elif marks>=65 to print("Grade C") else print("Grade D").
 
 marks = 85
 
