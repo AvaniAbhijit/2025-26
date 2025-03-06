@@ -3,6 +3,9 @@
 # We need event handling to listen to the player clicks.
 # If the player clicks "X" then the game quits as on lines 20 and 22.
 
+# Task 1: Write code for another if statement on line 23 to check for event.type == pygame.KEYDOWN: 
+# Task 2: When above condition is true, print("You pressed a key! Key Code:", event.key).
+
 import pygame
 pygame.init()
 
@@ -18,6 +21,8 @@ while running:
     for event in pygame.event.get():     # Check for User Quit
         if event.type == pygame.QUIT:
             running = False    
+    
+    
     pygame.display.update()           # Update display
 pygame.quit()                         # Quit Pygame
 
