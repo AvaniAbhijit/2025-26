@@ -1,7 +1,6 @@
-#  Session 9: Adding Startup Screen & Score Increment
-# In this session, we will:
-# Increase the ball speed after after a certain time
-# Reset the ball speed after a goal
+# Using python, we can create games.
+
+#Task: Run the code and check the output.
 
 
 import pygame
