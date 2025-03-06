@@ -1,6 +1,7 @@
-# In this session, we will: Import necessary libraries , Initialize Pygame
+# In this session, we will: Import necessary libraries, Initialize Pygame
 
-# Task 1:Define screen_width, screen_height variable on line 14,15 respectively and assign the value.
+# Task 1:Define screen_width and screen_height variables on lines 12,13, respectively, and assign the value.
+# Task 2: After you run the code, try to close the output window by clicking on the cross button. 
 
 import pygame
 
