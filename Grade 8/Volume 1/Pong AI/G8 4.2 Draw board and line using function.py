@@ -1,12 +1,12 @@
-# On line 38,draw_board() is the function to draw the screen and margin line.
-# The function is called inside the game while loop on line 51.
-# margin value defined on line no 21.
+# On line 40, draw_board() is the function to draw the screen and margin line.
+# The function is called inside the game while loop on line 53.
+# margin value defined on line no 23.
 # screen.fill(BG_COLOR) has been moved from while loop under draw_board function.
 # pygame.draw.line is the method in pygame to draw the line on the screen.
 
 # Task 1 : define the function draw() after draw_board() function.
-# Task 2 : Move the line no 54 and 55 code into the above function body.
-# Task 3 : Insted of the line 54,55 call the function draw().
+# Task 2: Move the code for lines 55 and 56 into the above function body.
+# Task 3: Instead of lines 55,56, call the function draw().
 
 import pygame
 pygame.init()
