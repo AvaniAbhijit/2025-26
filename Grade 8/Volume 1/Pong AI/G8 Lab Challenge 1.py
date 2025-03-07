@@ -26,10 +26,10 @@ rect_height = 100
 rect_y = (screen_height - rect_height) // 2
 
 # Left rectangle (x = 20)
-left_rect = pygame.Rect()
+left_paddle = pygame.Rect()
 
 # Right rectangle (x = screen_width - 40)
-right_rect = pygame.Rect()
+right_paddle = pygame.Rect()
 
 # Game loop
 running = True
@@ -41,8 +41,8 @@ while running:
     screen.fill(BG_COLOR)
 
     # Draw the rectangles
-    pygame.draw.rect(screen, WHITE, left_rect)
-    pygame.draw.rect(screen, WHITE, right_rect)
+    pygame.draw.rect(screen, WHITE, left_paddle)
+    pygame.draw.rect(screen, WHITE, right_paddle)
 
     pygame.display.update()
 
