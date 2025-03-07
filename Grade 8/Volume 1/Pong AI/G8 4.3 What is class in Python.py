@@ -1,6 +1,6 @@
-
+# Task Create person3 and call celebrate_birthday on this object.
 class Person:
-  def __init__(self, name):
+  def __init__(self, name,age):
       self.name = name
       self.age = age
 
@@ -12,7 +12,7 @@ class Person:
       print("Happy birthday! I am now", self.age, "years old.")
 
 # Creating instances (objects) of the Person class
-shriyans = Person("Alice", 25)
+person1 = Person("Alice", 25)
 person2 = Person("Bob", 30)
 
 # Accessing attributes
