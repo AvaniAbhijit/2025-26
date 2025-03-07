@@ -12,7 +12,7 @@ pygame.init()
 screen_width = 600
 screen_height = 500
 screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption('Two Vertical Rectangles')
+pygame.display.set_caption('Pong AI Game')
 
 # Colors
 BG_COLOR = (50, 25, 50)
