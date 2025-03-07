@@ -1,9 +1,9 @@
 # Create a Ball class on line 48 to draw it on the screen.
 # pygame.draw.ellipse(screen, WHITE, self.rect) is a method to draw ellipse shape.
-# self.rect = pygame.Rect(x, y, 15, 15) is rectangular area where the ball is drawn.
+# self.rect = pygame.Rect(x, y, 15, 15) is the rectangular area where the ball is drawn.
 
-# Task 1 : Create a ball instance of Ball class at the center of the screen on line no.
-# Task 2 : Call ball.draw() in the game loop on line no.
+# Task 1: Create a ball instance of Ball class at the center of the screen on line no.58
+# Task 2 : Call ball.draw() in the game loop on line no.73
 
 import pygame
 pygame.init()
