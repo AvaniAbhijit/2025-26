@@ -1,8 +1,8 @@
-# screen.fill on line 22 is used to give the screen color.
-# BG_COLOR on line 13 is a tuple variable which is contaning RGB values.
-# A tuple is python datatype which is an ordered list of elements within round brackers().
+# screen.fill on line 27 is used to give the screen color.
+# BG_COLOR on line 17 is a tuple variable contaning RGB values.
+# A tuple is a Python datatype that is an ordered list of elements within round brackets ().
 
-# Task 1 :Create a WHITE tuple variable on line 13 with value (255, 255, 255).
+# Task 1: Create a WHITE tuple variable on line 18 with value (255, 255, 255).
 # Task 2 :Change the screen color to WHITE.
 
 import pygame
