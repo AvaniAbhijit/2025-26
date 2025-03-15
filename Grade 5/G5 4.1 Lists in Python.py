@@ -23,5 +23,5 @@ print("After clearing list:",fruits)
 
 fruits = ["apple", "banana", "cherry"]
 print("First fruit _index 0 in the list:",fruits[0])  # First item
-print("Second fruit _index 1 in the list:"fruits[1])  # Second item
-print("Third fruit _index 2 in the list:"fruits[2])  # Third item
+print("Second fruit _index 1 in the list:",fruits[1])  # Second item
+print("Third fruit _index 2 in the list:",fruits[2])  # Third item
