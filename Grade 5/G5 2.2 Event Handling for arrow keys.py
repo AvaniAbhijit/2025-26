@@ -1,9 +1,9 @@
 # Event Handling for arrow keys
-# t.listen(): on line 36, turtle screen starts listening for key press. Works with onkey() function.
-# t.onkey(): on line 37, calls a function move_up() when UP arrow key is pressed.
-# move_up() function defined on line 32. Currently does nothing... but pass.
+# t.listen(): on line 38, turtle screen starts listening for key press. Works with onkey() function.
+# t.onkey(): on line 39, calls a function move_up() when UP arrow key is pressed.
+# move_up() function is defined on line 32. Currently, it does nothing but pass.
 
-# Task 1: Write similar onkey() functions for Down, Left and Right arrow keys
+# Task 1: Write similar onkey() functions for Down, Left and Right arrow keys.
 # Task 2: Write the corresponding move_down(), move_left() and move_right() functions.
 
 import turtle
