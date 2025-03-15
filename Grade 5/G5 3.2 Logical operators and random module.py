@@ -6,7 +6,7 @@
 
 # Task 1: Run the program and check the output.
 # Task 2: Change the num variable value to 55 on line 11 and run to see the output.
-# Task 3: Change 'and' operator to 'or' and now run and see the output.
+# Task 3: Change the 'and' operator to 'or' and now run and see the output.
 
 num = 25
 
