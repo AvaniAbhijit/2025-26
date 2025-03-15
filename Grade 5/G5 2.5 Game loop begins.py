@@ -1,6 +1,6 @@
 # Adding the Game loop to update the snake game screen continuously.
 # t.update() on line 68 refreshes the screen to show the latest changes.
-# time.sleep(delay) on line 69 pauses the program for a few seconds to make the animation smoother.
+# from time module on line 11 has time.sleep(delay) function used on line 69 pauses the program for a few seconds to make the animation smoother.
 # Note: delay is declared as a variable on line 13 as 0.1 seconds.
 
 # Task 1: Add an infinite while loop on line 67 for the screen to update continuously.
