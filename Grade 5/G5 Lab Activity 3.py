@@ -1,6 +1,6 @@
 # Lab Activity 3
 # Change the following for the food object:
-# ✅ make the food size smaller using shapesize(0.85, 0.85). 
+# ✅ make the food size smaller using shapesize(0.75, 0.75). 
 
 # Note: Syntax: shapesize(height, width). By default, the shapesize is (1,1). 
 
