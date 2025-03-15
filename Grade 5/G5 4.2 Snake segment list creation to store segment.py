@@ -1,5 +1,10 @@
-# Define snake segments as a list on line 69.
-# Create and add a segment to the snake on line 91 onwords in new_segment object.
+# Define snake segments as an empty list on line 75.
+# Create a new_segment turtle object on line 96 when the snake head collides with food.
+# Append the new_segment to the segment list on line 100.
+
+
+# Task 1: Complete the code for new_segment to set the following.
+#           speed(0), shape("square"), color("grey"), penup()
 
 
 import turtle
@@ -89,10 +94,9 @@ while True:
 
         # Create and add a segment to the snake
         new_segment = turtle.Turtle()
-        new_segment.speed(0)
-        new_segment.shape("square")
-        new_segment.color("grey")
-        new_segment.penup()
+
+
+        
         segments.append(new_segment)
 
     move()  # Call move() to move the snake continously
