@@ -1,5 +1,6 @@
-# Define snake segments as a list.
-# Add a snake segment turtle object when snake head collides with food.
+# Define snake segments as a list on line 69.
+# Create and add a segment to the snake on line 91 onwords in new_segment object.
+
 
 import turtle
 import time
@@ -75,7 +76,7 @@ t.onkey(move_left, "Left")
 t.onkey(move_down, "Down")
 t.onkey(move_right, "Right")
 
-# Infinte Game loop
+# Infinite game loop
 while True:
     t.update()          # ensures continuous updates of the screen.
 
