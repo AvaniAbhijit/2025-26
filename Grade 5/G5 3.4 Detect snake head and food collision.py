@@ -1,12 +1,13 @@
-# Detect head and food collision by checking the distance between the two.
-# distance() on line computes the distance between the current (x, y) positions of snake and food.
-# random module used to fetch random values for x and y coordinates of food.
-# Width and height of screen is 600 pixels. Hence, left/down is -300 and right/up is +300 from center.
+# Detect snake head and food collision by checking the distance between the food and snake head objects.
+# distance() on line 73 computes the distance between the current (x, y) positions of snake head and food objects.
+# The random module is used to fetch random values for the x and y coordinates of food on lines 75 & 76.
+# The width and height of the screen is 600 pixels. Hence, left/down is -300 and right/up is +300 from the  center.
+# For left and right wall collision, we check if head.xcor()is within the range -290 and 290 on line 80.
+# If the snake head collides with the left or right wall, then move the snake back to the center on line 81.
 
-# Task : Write the code for wall collision on line 77.
-# for left and right wall: head.xcor() must be within the range -290 and 290
-# for up and down wall: head.ycor() must be within the range -290 and 290
-# If it collides, move the head to center (0,0)
+# Task: Write the code for up and down wall collision on line 80. 
+#        Hint: for up and down wall: head.ycor() must be within the range -290 and 290
+
 
 import turtle
 import time
@@ -75,6 +76,8 @@ while True:
         y = random.randint(-290, 290)           # random value for y coordinate
         food.goto(x, y)                         # move the food to the random position
 
-
+   # Check for Wall collision
+    if head.xcor() > 290 or head.xcor() < -290 :
+        head.goto(0, 0)  # Move the snake back to the center
 
     time.sleep(delay)
