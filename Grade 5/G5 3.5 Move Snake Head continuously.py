@@ -1,6 +1,6 @@
 # Define direction property for snake head
 # Check for the arrow key pressed and change the direction
-# Move the snake head continously in the game loop by calling move().
+# Move the snake head continuously in the game loop by calling move().
 
 import turtle
 import time
