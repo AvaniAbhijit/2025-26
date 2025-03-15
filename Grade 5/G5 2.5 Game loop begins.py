@@ -3,7 +3,7 @@
 # time.sleep(delay) on line 69 pauses the program for a few seconds to make the animation smoother.
 # Note: delay is declared as a variable on line 13 as 0.1 seconds.
 
-# Task 1: Add an infinite **while loop** on line 67 for the screen to update continuously.
+# Task 1: Add an infinite while loop on line 67 for the screen to update continuously.
 # Task 2: Uncomment lines 68 and 69 to see the output.
 
 
@@ -63,7 +63,7 @@ t.onkey(move_left, "Left")
 t.onkey(move_down, "Down")
 t.onkey(move_right, "Right")
 
-# Infinte Game loop
+# Infinite game loop
 
 #    t.update()          # ensures continuous updates of the screen.
-#    time.sleep(delay)   # Adds a small delay to control speed of snake head.
+#    time.sleep(delay)   # Adds a small delay to control the speed of the snake head.
