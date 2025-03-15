@@ -8,8 +8,8 @@
 # Task: Write the code for up and down wall collision on line 80. 
 #        Hint: for up and down wall: head.ycor() must be within the range -290 and 290
 
-
 import turtle
+import random
 import time
 
 delay = 0.1
