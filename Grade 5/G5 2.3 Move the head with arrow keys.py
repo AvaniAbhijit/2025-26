@@ -1,6 +1,7 @@
 # ycor() returns the current y-coordinate of the turtle on the screen on line 32.
-# sety() moves the turtle to the given y-coordinate without changing its x-coordinate on line 34..
-# new_y is the new coordinate of the y, which is changed to 20 pixels up(+).
+# new_y is the new coordinate of the y, which is changed to 20 pixels up(+) on line 33.
+# sety() moves the turtle to the given y-coordinate without changing its x-coordinate on line 34.
+
 # Task: Based on move_up function body, write a similar function body for:
 #       move_down(), move_right() and move_left() functions.
 
