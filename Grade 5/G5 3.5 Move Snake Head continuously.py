@@ -1,12 +1,12 @@
-# Define the direction property for the snake head on line 23.
-# Check for the arrow key pressed and change the direction.
-# On line 53, function move_up() is chekcing for the up arrow key.
-# On line 68,function move_left() chekes for the left arrow key.
-# Move the snake head continuously in the game loop by calling move() on line 88.
+# Define the direction property for the snake head on line 29.
+# On line 56, function move_up() checks for the up arrow key to change the direction of the snake head to up.
+# On line 70, function move_left() checks for the left arrow key to change the direction of the snake head to left.
+# On line 38, move() function to set the new position based on the directions.
+# Move the snake head continuously in the game loop by calling move() on line 93.
 
 
-# Task 1 : Write the fucnction for move_down() on line 60 onwords.
-# Task 2: Complete the code for move_righ on line 66 onwards.
+# Task 1 : Complete the code for move_down() on line 61 onwords.
+# Task 2: Complete the code for move_right() on line 65 onwards.
 
 import turtle
 import time
@@ -55,7 +55,7 @@ def move():
 # when up arrow key is pressed
 def move_up():
     if head.direction != "down":
-        head.direction = "up"   #sets the direction of snake head direction to UP
+        head.direction = "up"   #sets the direction of snake head to UP
 
 # when down arrow key is pressed
 def move_down():
