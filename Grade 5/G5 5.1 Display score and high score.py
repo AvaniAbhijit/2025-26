@@ -1,8 +1,8 @@
 # Declared score and high_score variables on line 36 & 37 .
 # Created pen turtle object to show text - score and high_score on screen on line 39.
+# Use write() to display score and high_score on line 47.
 
-
-# Task: Write the code for setting the following properties of pen turtle  on line 40 onwords:
+# Task: Write the code for setting the following properties of pen turtle  on line 40 onwards:
 # speed(0), shape("square"), color("white"), penup(),hideturtle(), goto(0, 260) 
 
 import turtle
@@ -44,8 +44,7 @@ pen = turtle.Turtle()
 
 
 # use write() to display score and high_score
-pen.write("Score: 0 High Score: {}".format(high_score), align="center", font=("Courier", 24, "normal"))
-
+pen.write(f"Score: 0 High Score: {high_score}", align="center", font=("Courier", 24, "normal"))     # Use f-string to display the high_score value.
 
 def move():
     if head.direction == "up":      #check if direction is up
