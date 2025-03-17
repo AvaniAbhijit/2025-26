@@ -1,4 +1,8 @@
-# Clear segments when head collides with wall
+# Use the for loop to clear segments when the head collides with a wall on line 120.
+# Move segments to off-screen location if it collides with wall by using segment.goto(1000, 1000) on line 121.
+
+# Task 1: Change the values for the segment from segment.goto(1000, 1000) to segment.goto(55,200) on line 121 and observe the output.
+# Task 2: Write the code to clear the segment list on line 124 by using the clear() method of list.
 
 import turtle
 import time
@@ -95,29 +99,29 @@ while True:
 
     # Move the snake segments in reverse order
     for index in range(len(segments) - 1, 0, -1):
-        x = segments[index - 1].xcor()      # x coordinate of the previous segment
-        y = segments[index - 1].ycor()      # y coordinate of the previous segment
-        segments[index].goto(x, y)          # move the current segment to the previous segment position
+        x = segments[index - 1].xcor()      
+        y = segments[index - 1].ycor()     
+        segments[index].goto(x, y)          
 
-    if len(segments) > 0:       # move the first segment
-        x = head.xcor()         # x coordinate of first segment as head x coordinate
-        y = head.ycor()         # y coordinate of first segment as head y coordinate
-        segments[0].goto(x, y)  # set the postion of first segment as head position
+    if len(segments) > 0:       
+        x = head.xcor()         
+        y = head.ycor()         
+        segments[0].goto(x, y)  
 
-    move()  # Call move() to move the snake continously
+    move()  
 
     # Check for collision with the wall
     if head.xcor() > 290 or head.xcor() < -290 or head.ycor() > 290 or head.ycor() < -290:
         time.sleep(1)
-        head.goto(0, 0)       # reset the position of snake to center.
-        head.direction = "stop"  #change the direction of head to stop on collision
+        head.goto(0, 0)       
+        head.direction = "stop"  
 
         # Hide the segments
         for segment in segments:
-            segment.goto(1000, 1000)   #moving segments to off-screen location
+            segment.goto(1000, 1000)   # moving segments to off-screen location
 
         # Clear the segment list
         segments.clear()
 
 
-    time.sleep(delay)   #  Adds a small delay to control speed of snake head.
+    time.sleep(delay)   #  Adds a small delay to control speed of the snake head.
