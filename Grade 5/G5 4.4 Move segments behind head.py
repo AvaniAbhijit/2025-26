@@ -1,12 +1,12 @@
 # Move the body segments (excluding the first segment) in reverse order
-# ----The loop starts from the last segment (len(segments) - 1) and moves towards the first segment (index = 1) on line 105.
+# ----The for loop starts from the last segment and moves towards the first segment (index = 1) on line 105.
 # ----For each segment, it takes the position (x, y) of the segment before it and moves to that position on lines 106 & 107.
 # ----This ensures that when the head moves, all segments follow its previous segment.
 # Move the first segment (directly behind the head).
 # ----The first segment (directly behind the head) is updated separately on line 110.
 
-
-# Task 1: Complete the code on line 111 & 112 for the x & y coordinate of snake head.
+# Task 1: Complete the code on line 105 by adding the parameters in the () like start: len(segments)-1, end: 0 , decrement by 1
+# Task 2: Complete the code on line 111 & 112 for the x & y coordinate of snake head.
 
 import turtle
 import time
@@ -102,7 +102,7 @@ while True:
         segments.append(new_segment)
 
     # Move the snake segments in reverse order
-    for index in range(len(segments) - 1, 0, -1):
+    for index in range(len():
         x = segments[index - 1].xcor()      # x coordinate of the previous segment
         y = segments[index - 1].ycor()      # y coordinate of the previous segment
         segments[index].goto(x, y)          # move the current segment to the previous segment position
