@@ -1,10 +1,6 @@
+# On  line 22, we print the event to check the screen coordinates.
 
-# screen.fill on line 29 is used to give the screen color.
-# BG_COLOR on line 18 is a tuple variable which is contaning RGB values.
-# A tuple is python datatype which is an ordered list of elements within round brackers().
-
-# Task 1 :Create a WHITE tuple variable on line 20 with value (255, 255, 255).
-# Task 2 :Change the screen color to WHITE.
+# Task: Run the code and move the mouse on the output screen to check the screen coordinates.
 
 import pygame
 pygame.init()
@@ -16,7 +12,7 @@ pygame.display.set_caption('Pong AI Game')
 
 # Define colors
 BG_COLOR = (50, 25, 50)  # Dark purple background
-
+WHITE = (255, 255, 255)
 
 running = True
 while running:
@@ -25,7 +21,7 @@ while running:
             running = False
         print(event)
 
-    # Fill background color
+    # Fill the background color
     screen.fill(BG_COLOR)
 
     # Update display
