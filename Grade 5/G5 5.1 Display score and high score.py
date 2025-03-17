@@ -1,5 +1,9 @@
-# Define score and high_score variables
-# Declare pen turtle to show text - score and high_score on screen.
+# Declared score and high_score variables on line 36 & 37 .
+# Created pen turtle object to show text - score and high_score on screen on line 39.
+
+
+# Task: Write the code for setting the following properties of pen turtle  on line 40 onwords:
+# speed(0), shape("square"), color("white"), penup(),hideturtle(), goto(0, 260) 
 
 import turtle
 import time
@@ -33,12 +37,12 @@ score = 0
 high_score = 0
 
 pen = turtle.Turtle()
-pen.speed(0)
-pen.shape("square")
-pen.color("white")
-pen.penup()
-pen.hideturtle()  # hide the turtle from the screen
-pen.goto(0, 260)
+
+
+
+
+
+
 # use write() to display score and high_score
 pen.write("Score: 0 High Score: {}".format(high_score), align="center", font=("Courier", 24, "normal"))
 
@@ -63,22 +67,22 @@ def move():
 # when up arrow key is pressed
 def move_up():
     if head.direction != "down":
-        head.direction = "up"   #sets the direction of snake head direction to UP
+        head.direction = "up"   #sets the direction of snake head to UP
 
 # when down arrow key is pressed
 def move_down():
     if head.direction != "up":
-        head.direction = "down"  #sets the direction of snake head direction to DOWN
+        head.direction = "down"  #sets the direction of snake head to DOWN
 
 # when right arrow key is pressed
 def move_right():
     if head.direction != "left":
-        head.direction = "right"  #sets the direction of snake head direction to RIGHT
+        head.direction = "right"  #sets the direction of snake head to RIGHT
 
 # when left arrow key is pressed
 def move_left():
     if head.direction != "right":
-        head.direction = "left"    #sets the direction of snake head direction to LEFT
+        head.direction = "left"    #sets the direction of snake head to LEFT
 
 # Define snake segments as a list
 segments = []
@@ -90,7 +94,7 @@ t.onkey(move_left, "Left")
 t.onkey(move_down, "Down")
 t.onkey(move_right, "Right")
 
-# Infinte Game loop
+# Infinite game loop
 while True:
     t.update()          # ensures continuous updates of the screen.
 
@@ -118,7 +122,7 @@ while True:
     if len(segments) > 0:       # move the first segment
         x = head.xcor()         # x coordinate of first segment as head x coordinate
         y = head.ycor()         # y coordinate of first segment as head y coordinate
-        segments[0].goto(x, y)  # set the postion of first segment as head position
+        segments[0].goto(x, y)  # set the position of first segment as head position
 
     move()  # Call move() to move the snake continously
 
