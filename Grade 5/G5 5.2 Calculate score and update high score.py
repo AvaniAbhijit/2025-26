@@ -1,6 +1,8 @@
-# Update score and high score values upon snake itself collision on line 167 onwards.
-# Clear the text and display the new values
-# Reset score when head and wall collision happens.
+# Update score and high score values upon snake head & food  collision on line 117 to 119.
+# Clear the text and display the new values on line 122, 172.
+# Reset score when snake head collides with itself on line 170 onwords.
+
+# Task 1 : Write the code for reset score when snake head collides with wall on line 152 onwords.
 
 import turtle
 import time
@@ -41,7 +43,8 @@ pen.penup()
 pen.hideturtle()  # hide the turtle from the screen
 pen.goto(0, 260)
 # use write() to display score and high_score
-pen.write("Score: 0 High Score: {}".format(high_score), align="center", font=("Courier", 24, "normal"))
+pen.write(f"Score: 0 High Score: {high_score}", align="center", font=("Courier", 24, "normal")) 
+
 
 
 def move():
@@ -117,7 +120,7 @@ while True:
 
         # Update score display
         pen.clear()             # clear the previous score values
-        pen.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+        pen.write(f"Score: {score} High Score: {high_score}", align="center", font=("Courier", 24, "normal"))     
 
 
     # Move the snake segments in reverse order
@@ -167,7 +170,7 @@ while True:
         # Reset score
         score = 0
         pen.clear()
-        pen.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+        pen.write(f"Score: {score} High Score: {high_score}", align="center", font=("Courier", 24, "normal")) 
 
 
 
