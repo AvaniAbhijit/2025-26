@@ -138,6 +138,20 @@ while True:
         # Clear the segment list
         segments.clear()
 
+    # Check for collision with the snake itself
+    for segment in segments:
+        if segment.distance(head) < 20:
+            time.sleep(1)
+            head.goto(0, 0)
+            head.direction = "stop"
+
+            # Hide the segments
+            for segment in segments:
+                segment.goto(1000, 1000)
+
+            # Clear the segment list
+            segments.clear()
+
 
     time.sleep(delay)   #  Adds a small delay to control speed of snake head.
 
