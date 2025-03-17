@@ -1,4 +1,4 @@
-# Update score and high score values upon head and food collision
+# Update score and high score values upon snake itself collision on line 167 onwards.
 # Clear the text and display the new values
 # Reset score when head and wall collision happens.
 
@@ -129,7 +129,7 @@ while True:
     if len(segments) > 0:       # move the first segment
         x = head.xcor()         # x coordinate of first segment as head x coordinate
         y = head.ycor()         # y coordinate of first segment as head y coordinate
-        segments[0].goto(x, y)  # set the postion of first segment as head position
+        segments[0].goto(x, y)  # set the position of first segment as head position
 
     move()  # Call move() to move the snake continously
 
@@ -146,6 +146,24 @@ while True:
         # Clear the segment list
         segments.clear()
 
+      # Reset score
+   
+
+
+    # Check for collision with the snake itself
+    for segment in segments:
+        if segment.distance(head) < 20:
+            time.sleep(1)
+            head.goto(0, 0)
+            head.direction = "stop"
+
+            # Hide the segments
+            for segment in segments:
+                segment.goto(1000, 1000)
+
+            # Clear the segment list
+            segments.clear()
+
         # Reset score
         score = 0
         pen.clear()
@@ -153,7 +171,7 @@ while True:
 
 
 
-    time.sleep(delay)   #  Adds a small delay to control speed of snake head.
+    time.sleep(delay)   #  Adds a small delay to control the speed of the snake head.
 
 
 
