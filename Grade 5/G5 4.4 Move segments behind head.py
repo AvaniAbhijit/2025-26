@@ -1,4 +1,12 @@
-# Make snake segments follow the snake head
+# Moving the body segments (excluding the head) in reverse order
+# ----The loop starts from the last segment (len(segments) - 1) and moves towards the first segment (index = 1) on line 99.
+# ----For each segment, it takes the position (x, y) of the segment before it and moves to that position on lines 104 & 105.
+# ----This ensures that when the head moves, all segments follow its previous path.
+# Moving the first segment (directly behind the head)
+# ----The first segment (directly behind the head) is updated separately.
+# ----It takes the head’s previous position so that it follows the head.
+
+
 
 import turtle
 import time
@@ -47,22 +55,22 @@ def move():
 # when up arrow key is pressed
 def move_up():
     if head.direction != "down":
-        head.direction = "up"   #sets the direction of snake head direction to UP
+        head.direction = "up"   #sets the direction of snake head to UP
 
 # when down arrow key is pressed
 def move_down():
     if head.direction != "up":
-        head.direction = "down"  #sets the direction of snake head direction to DOWN
+        head.direction = "down"  #sets the direction of snake head to DOWN
 
 # when right arrow key is pressed
 def move_right():
     if head.direction != "left":
-        head.direction = "right"  #sets the direction of snake head direction to RIGHT
+        head.direction = "right"  #sets the direction of snake head to RIGHT
 
 # when left arrow key is pressed
 def move_left():
     if head.direction != "right":
-        head.direction = "left"    #sets the direction of snake head direction to LEFT
+        head.direction = "left"    #sets the direction of snake head to LEFT
 
 # Define snake segments as a list
 segments = []
@@ -74,7 +82,7 @@ t.onkey(move_left, "Left")
 t.onkey(move_down, "Down")
 t.onkey(move_right, "Right")
 
-# Infinte Game loop
+# Infinite game loop
 while True:
     t.update()          # ensures continuous updates of the screen.
 
@@ -102,7 +110,7 @@ while True:
     if len(segments) > 0:       # move the first segment
         x = head.xcor()         # x coordinate of first segment as head x coordinate
         y = head.ycor()         # y coordinate of first segment as head y coordinate
-        segments[0].goto(x, y)  # set the postion of first segment as head position
+        segments[0].goto(x, y)  # set the position of first segment as head position
 
     move()  # Call move() to move the snake continously
 
@@ -111,5 +119,5 @@ while True:
         time.sleep(1)
         head.goto(0, 0)       # reset the position of snake to center.
 
-    time.sleep(delay)   #  Adds a small delay to control speed of snake head.
+    time.sleep(delay)   #  Adds a small delay to control the speed of the snake head.
 
