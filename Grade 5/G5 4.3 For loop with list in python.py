@@ -22,6 +22,10 @@ print("List creation")
 numbers = [11,22,33,44]
 total = len(numbers)
 
+print("List items usingin operator in for loop")
+for num in numbers:
+    print(num)
+
 print("Number in the list from index 0")
 for i in range(total):
     print("index ",i, " - ", numbers[i])
