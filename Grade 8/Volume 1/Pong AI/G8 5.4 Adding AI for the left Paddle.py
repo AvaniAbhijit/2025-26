@@ -1,12 +1,16 @@
 # Under the paddle, ai method is declared to move the paddle automatically.
-# Condition 1: self.rect.centery < ball.rect.top
+# Condition 1: self.rect.centery < ball.rect.top  on line 54
 #              This checks if the center of the paddle is above the top of the ball.
 #              This means the ball is moving downward, and the paddle should move down to follow it.
-# Condition 2: self.rect.bottom < screen_height
+# Condition 2: self.rect.bottom < screen_height    on line 54
 #              Ensures the paddle does not go beyond the bottom edge of the screen.
 #              Prevents the paddle from moving out of bounds.
 
-# Task  : Complete the code to move the paddle up from line 53 onwords.
+# Task: Complete the code to move the paddle up from line 57 onwards.
+# Condition 1: Check if the center of the paddle is below the bottom of the ball.
+#              This means the ball is moving upward, so the paddle should move up to follow it.
+# Condition 2: Ensures the paddle does not go above the top margin of the screen.
+#              Prevents the paddle from moving out of bounds.
 
 import pygame
 pygame.init()
