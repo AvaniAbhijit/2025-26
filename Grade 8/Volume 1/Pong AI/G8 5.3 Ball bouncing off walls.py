@@ -1,9 +1,9 @@
-# move(self) method in the Ball class moves the ball automatically by updating its x and y coordinates, Move() method called in the game loop on line 84.
+# move(self) method in the Ball class moves the ball automatically by updating its x and y coordinates, Move() method called in the game loop on line 86.
 # self.rect.x += self.speed_x → Moves the ball horizontally.
 # self.rect.y += self.speed_y → Moves the ball vertically.
-# or logical operator is used to check if either of the 2 conditions is true.
+# On line 59,The condition checks if the ball’s top has crossed the margin.
 
-# Task: Change the value for self.speed_x and self.speed_y and see the change.
+# Task: Write the code for check collision with the bottom of the screen on line 62 onwards.
 
 import pygame
 pygame.init()
@@ -55,13 +55,15 @@ class Ball:
         pygame.draw.ellipse(screen, WHITE, self.rect)
 
     def move(self):
+        #check collision with top MARGIN
+        if self.rect.top < margin:
+            self.speed_y *= -1
+        #check collision with bottom of the screen
+
+        
+
         self.rect.x += self.speed_x
         self.rect.y += self.speed_y
-
-        # Bounce on top and bottom
-        if self.rect.top <= 50 or self.rect.bottom >= screen_height:
-            self.speed_y *= -1
-
 
 right_paddle = Paddle(screen_width - 40, rect_y)
 left_paddle = Paddle(20, rect_y)
