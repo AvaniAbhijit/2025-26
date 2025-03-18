@@ -1,12 +1,3 @@
-
-# Following are the steps to display text on screen -
-# 1. Define font variable on line 21.
-# 2. Call font.render to convert text to image on line 38.
-# 3. Call blit method to transfer image on the screen pixel by pixel.
-# draw_text is the function which is doing the above 2nd and 3rd step.
-
-# Task : change the font style and font size on line 38 and observe the output.
-
 import pygame
 pygame.init()
 
