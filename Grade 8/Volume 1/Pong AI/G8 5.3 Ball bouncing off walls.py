@@ -1,7 +1,7 @@
-# move(self)method in the Ball class moves the ball by updating its x and y coordinates:
+# move(self) method in the Ball class moves the ball automatically by updating its x and y coordinates, Move() method called in the game loop on line 84.
 # self.rect.x += self.speed_x → Moves the ball horizontally.
 # self.rect.y += self.speed_y → Moves the ball vertically.
-# or logical operator is use to check if either of the 2 conditions is true.
+# or logical operator is used to check if either of the 2 conditions is true.
 
 # Task: Change the value for self.speed_x and self.speed_y and see the change.
 
