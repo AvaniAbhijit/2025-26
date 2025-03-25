@@ -1,8 +1,8 @@
-# Update score and high score values upon snake head & food  collision on line 117 to 119.
-# Clear the text and display the new values on line 122, 172.
-# Reset score when snake head collides with itself on line 170 onwords.
+# Update score and high score values upon snake head & food  collision on lines 113 to 115.
+# Clear the text and display the new values on lines 118, 168.
+# Reset the score when the snake head collides with itself on line 166 onwards.
 
-# Task 1 : Write the code for reset score when snake head collides with wall on line 152 onwords.
+# Task 1: Write the code for resetting the score when the snake head collides with a wall on line 148 onwards.
 
 import turtle
 import time
@@ -66,23 +66,19 @@ def move():
 
 # when up arrow key is pressed
 def move_up():
-    if head.direction != "down":
-        head.direction = "up"   #sets the direction of snake head direction to UP
+    head.direction = "up"   #sets the direction of snake head to UP
 
 # when down arrow key is pressed
 def move_down():
-    if head.direction != "up":
-        head.direction = "down"  #sets the direction of snake head direction to DOWN
+    head.direction = "down"  #sets the direction of snake head to DOWN
 
 # when right arrow key is pressed
 def move_right():
-    if head.direction != "left":
-        head.direction = "right"  #sets the direction of snake head direction to RIGHT
+    head.direction = "right"  #sets the direction of snake head to RIGHT
 
 # when left arrow key is pressed
 def move_left():
-    if head.direction != "right":
-        head.direction = "left"    #sets the direction of snake head direction to LEFT
+    head.direction = "left"    #sets the direction of snake head to LEFT
 
 # Define snake segments as a list
 segments = []
