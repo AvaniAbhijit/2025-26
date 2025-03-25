@@ -146,7 +146,7 @@ while True:
         # Clear the segment list
         segments.clear()
 
-      # Reset score
+        # Reset score
    
 
 
@@ -164,10 +164,10 @@ while True:
             # Clear the segment list
             segments.clear()
 
-        # Reset score
-        score = 0
-        pen.clear()
-        pen.write(f"Score: {score} High Score: {high_score}", align="center", font=("Courier", 24, "normal")) 
+            # Reset score
+            score = 0
+            pen.clear()
+            pen.write(f"Score: {score} High Score: {high_score}", align="center", font=("Courier", 24, "normal")) 
 
 
 
