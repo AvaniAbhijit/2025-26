@@ -1,6 +1,7 @@
 # On line 8, t is a variable that is used to store the turtle.Screen() object.
 
-# Task: Change the variable name t to "t1".
+# Task 1: Change the variable name t to "t1" on line 9.
+# Task 2: Run the code and observe the error and fic the error.
 
 import turtle  # Import the turtle module, which provides graphics functions for drawing.
 
