@@ -1,8 +1,8 @@
 # A for loop helps us repeat something again and again without writing the same code multiple times.
 # The range() function helps us repeat something a fixed number of times in Python.
 # range(1,5,1) on line 14 means "start at 1 and stop before 5 and increase by 1.
-# range(5,1,-1) on line 18 means "start at 5 and stop before 1 and decrease by 1.
-# The len() on line 23 helps us count how many items are in a list.
+# range(5,1,-1) on line 19 means "start at 5 and stop before 1 and decrease by 1.
+# The len() on line 24 helps us count how many items are in a list.
 
 
 
