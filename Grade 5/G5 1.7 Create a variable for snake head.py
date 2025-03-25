@@ -1,7 +1,7 @@
 # head is a variable name which is storing turtle.Turtle() object on line 13.
 # turtle.Turtle() on line 13 creates a new turtle object.
 
-# Task: Set the color of the 'head' turtle to black within the " " on line no. 15.
+# Task: Set the color of the 'head' turtle to black within the " " on line no. 16.
 
 import turtle
 t = turtle.Screen()
