@@ -1,9 +1,9 @@
-# Define snake segments as an empty list on line 75.
-# Create a new_segment turtle object on line 96 when the snake head collides with food.
-# Append the new_segment to the segment list on line 100.
+# Define snake segments as an empty list on line 71.
+# Create a new_segment turtle object on line 92 when the snake head collides with food.
+# Append the new_segment to the segment list on line 96.
 
 
-# Task 1: Complete the code for new_segment to set the following on line 97 onwards.
+# Task 1: Complete the code for new_segment to set the following on line 93 onwards.
 #           speed(0), shape("square"), color("grey"), penup()
 
 
@@ -53,23 +53,19 @@ def move():
 
 # when up arrow key is pressed
 def move_up():
-    if head.direction != "down":
-        head.direction = "up"   #sets the direction of snake head direction to UP
+    head.direction = "up"   #sets the direction of snake head to UP
 
 # when down arrow key is pressed
 def move_down():
-    if head.direction != "up":
-        head.direction = "down"  #sets the direction of snake head direction to DOWN
+    head.direction = "down"  #sets the direction of snake head to DOWN
 
 # when right arrow key is pressed
 def move_right():
-    if head.direction != "left":
-        head.direction = "right"  #sets the direction of snake head direction to RIGHT
+    head.direction = "right"  #sets the direction of snake head to RIGHT
 
 # when left arrow key is pressed
 def move_left():
-    if head.direction != "right":
-        head.direction = "left"    #sets the direction of snake head direction to LEFT
+    head.direction = "left"    #sets the direction of snake head to LEFT
 
 # Define snake segments as a list
 segments = []
