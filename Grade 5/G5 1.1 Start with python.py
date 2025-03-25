@@ -1,5 +1,7 @@
+# Python is used for mathematical operations as shown in the below code.
+
 # Task 1: Run the code and check the output.
-# Task 2: Change the number for addition(line no.14) and multiplication (line no. 16).
+# Task 2: Change the number for addition(line no.16) and multiplication (line no. 18).
 # Task 3: Write the print statement to subtract two numbers
 
 
