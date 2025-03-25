@@ -1,8 +1,8 @@
-# Use the for loop to clear segments when the head collides with a wall on line 120.
-# Move segments to off-screen location if it collides with wall by using segment.goto(1000, 1000) on line 121.
+# Use the for loop to clear segments when the head collides with a wall on line 116.
+# Move segments to off-screen location if it collides with wall by using segment.goto(1000, 1000) on line 117.
 
-# Task 1: Change the values for the segment from segment.goto(1000, 1000) to segment.goto(55,200) on line 121 and observe the output.
-# Task 2: Write the code to clear the segment list on line 124 by using the clear() method of list.
+# Task 1: Change the values for the segment from segment.goto(1000, 1000) to segment.goto(55,200) on line 117 and observe the output.
+# Task 2: Write the code to clear the segment list on line 120 by using the clear() method of list.
 
 import turtle
 import time
@@ -50,23 +50,19 @@ def move():
 
 # when up arrow key is pressed
 def move_up():
-    if head.direction != "down":
-        head.direction = "up"   #sets the direction of snake head direction to UP
+    head.direction = "up"   #sets the direction of snake head to UP
 
 # when down arrow key is pressed
 def move_down():
-    if head.direction != "up":
-        head.direction = "down"  #sets the direction of snake head direction to DOWN
+    head.direction = "down"  #sets the direction of snake head to DOWN
 
 # when right arrow key is pressed
 def move_right():
-    if head.direction != "left":
-        head.direction = "right"  #sets the direction of snake head direction to RIGHT
+    head.direction = "right"  #sets the direction of snake head to RIGHT
 
 # when left arrow key is pressed
 def move_left():
-    if head.direction != "right":
-        head.direction = "left"    #sets the direction of snake head direction to LEFT
+    head.direction = "left"    #sets the direction of snake head to LEFT
 
 # Define snake segments as a list
 segments = []
