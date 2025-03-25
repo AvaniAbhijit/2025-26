@@ -1,12 +1,12 @@
 # Move the body segments (excluding the first segment) in reverse order
-# ----The for loop starts from the last segment and moves towards the first segment (index = 1) on line 105.
-# ----For each segment, it takes the position (x, y) of the segment before it and moves to that position on lines 106 & 107.
+# ----The for loop starts from the last segment and moves towards the first segment (index = 1) on line 101.
+# ----For each segment, it takes the position (x, y) of the segment before it and moves to that position on lines 102 & 103.
 # ----This ensures that when the head moves, all segments follow its previous segment.
 # Move the first segment (directly behind the head).
-# ----The first segment (directly behind the head) is updated separately on line 110.
+# ----The first segment (directly behind the head) is updated separately on line 106.
 
 
-# Task 1: Complete the code on line 111 & 112 for the x & y coordinate of snake head.
+# Task 1: Complete the code on line 107 & 108 for the x & y coordinate of snake head.
 
 import turtle
 import time
@@ -54,23 +54,19 @@ def move():
 
 # when up arrow key is pressed
 def move_up():
-    if head.direction != "down":
-        head.direction = "up"   #sets the direction of snake head to UP
+    head.direction = "up"   #sets the direction of snake head to UP
 
 # when down arrow key is pressed
 def move_down():
-    if head.direction != "up":
-        head.direction = "down"  #sets the direction of snake head to DOWN
+    head.direction = "down"  #sets the direction of snake head to DOWN
 
 # when right arrow key is pressed
 def move_right():
-    if head.direction != "left":
-        head.direction = "right"  #sets the direction of snake head to RIGHT
+    head.direction = "right"  #sets the direction of snake head to RIGHT
 
 # when left arrow key is pressed
 def move_left():
-    if head.direction != "right":
-        head.direction = "left"    #sets the direction of snake head to LEFT
+    head.direction = "left"    #sets the direction of snake head to LEFT
 
 # Define snake segments as a list
 segments = []
