@@ -6,7 +6,7 @@
 # On line 25, New_fruits is an empty list created using [].
 # Each item in a list has a position number called an index. Python starts counting from 0 (not 1!).
 
-# Task1: Create a new list of your favorite colors and print it.
+# Task1: Create a new list of your favorite colors on line 35 and print it.
 # Task 2: Add a new color to the list using .append() and print the updated list.
 # Task3: Remove all items from the list using .clear() and print the empty list.
 # Task4: Create a list of 5 numbers and print the third number using indexing.
