@@ -1,8 +1,9 @@
-# Update score and high score values upon snake head & food  collision on lines 113 to 115.
-# Clear the text and display the new values on lines 118, 168.
+# Update score and high score values upon snake head & food  collision on lines 114 to 116.
+# Clear the text and display the new values on lines 119, 169.
 # Reset the score when the snake head collides with itself on line 166 onwards.
+# t.tracer(0) is a Turtle Graphics function that controls automatic screen updates on line 19.
 
-# Task 1: Write the code for resetting the score when the snake head collides with a wall on line 148 onwards.
+# Task 1: Write the code for resetting the score when the snake head collides with a wall on line 149 onwards.
 
 import turtle
 import time
@@ -15,7 +16,7 @@ t = turtle.Screen()
 t.title("Snake Game")
 t.bgcolor("Dark Green")
 t.setup(width=600, height=600)
-
+t.tracer(0)
 # Snake Head
 head = turtle.Turtle()
 head.shape("square")
