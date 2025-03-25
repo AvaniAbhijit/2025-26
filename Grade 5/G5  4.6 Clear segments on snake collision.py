@@ -1,7 +1,7 @@
-# Use the for loop to check for collision with the snake itself on line 128.
+# Use the for loop to check for collision with the snake itself on line 124.
 
-# Task : complete the code from line 132 to 137
-#        to hide & clear the segment once it collides with itself.
+# Task: complete the code from line 128 to 133
+#        Hide & clear the segment once it collides with itself.
 
 
 import turtle
@@ -50,23 +50,19 @@ def move():
 
 # when up arrow key is pressed
 def move_up():
-    if head.direction != "down":
-        head.direction = "up"   #sets the direction of snake head direction to UP
+    head.direction = "up"   #sets the direction of snake head to UP
 
 # when down arrow key is pressed
 def move_down():
-    if head.direction != "up":
-        head.direction = "down"  #sets the direction of snake head direction to DOWN
+    head.direction = "down"  #sets the direction of snake head to DOWN
 
 # when right arrow key is pressed
 def move_right():
-    if head.direction != "left":
-        head.direction = "right"  #sets the direction of snake head direction to RIGHT
+    head.direction = "right"  #sets the direction of snake head to RIGHT
 
 # when left arrow key is pressed
 def move_left():
-    if head.direction != "right":
-        head.direction = "left"    #sets the direction of snake head direction to LEFT
+    head.direction = "left"    #sets the direction of snake head to LEFT
 
 # Define snake segments as a list
 segments = []
@@ -78,7 +74,7 @@ t.onkey(move_left, "Left")
 t.onkey(move_down, "Down")
 t.onkey(move_right, "Right")
 
-# Infinte Game loop
+# Infinite game loop
 while True:
     t.update()          # ensures continuous updates of the screen.
 
