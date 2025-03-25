@@ -3,7 +3,7 @@
 # Append the new_segment to the segment list on line 100.
 
 
-# Task 1: Complete the code for new_segment to set the following on line 100 onwords.
+# Task 1: Complete the code for new_segment to set the following on line 97 onwards.
 #           speed(0), shape("square"), color("grey"), penup()
 
 
