@@ -1,6 +1,6 @@
 # Use the for loop to check for collision with the snake itself on line 124.
 
-# Task: complete the code from line 128 to 133
+# Task: Complete the code from line 128 to 133
 #        Hide & clear the segment once it collides with itself.
 
 
