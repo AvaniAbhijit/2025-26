@@ -1,8 +1,9 @@
-# Use the for loop to clear segments when the head collides with a wall on line 116.
-# Move segments to off-screen location if it collides with wall by using segment.goto(1000, 1000) on line 117.
+# Use the for loop to hide segments when the head collides with a wall on line 117.
+# Hiding the body of the snake after the wall collision using hideturtle() command on line 118.
+# Clearing the list segments using segment.clear() command on line 121.
 
-# Task 1: Change the values for the segment from segment.goto(1000, 1000) to segment.goto(55,200) on line 117 and observe the output.
-# Task 2: Write the code to clear the segment list on line 120 by using the clear() method of list.
+# Task 1: Change line 117 code from segment.hideturtle() to segment.showturtle().
+
 
 import turtle
 import time
@@ -114,10 +115,9 @@ while True:
 
         # Hide the segments
         for segment in segments:
-            segment.goto(1000, 1000)   # moving segments to off-screen location
-
+            segment.hideturtle()   # Hiding the segments
+       
         # Clear the segment list
         segments.clear()
-
 
     time.sleep(delay)   #  Adds a small delay to control speed of the snake head.
