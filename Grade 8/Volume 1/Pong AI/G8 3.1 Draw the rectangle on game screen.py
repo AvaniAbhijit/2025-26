@@ -4,7 +4,7 @@
 #   - Color of the shape: WHITE
 #   - rectangular area : tuple : (x_coordinate, y_coordinate, width, height)
 # The x and y coordinates are the values of the top left position of the rectangle
-# All these variables are defined from line no26 to 29.
+# All these variables are defined from line no 26 to 29.
 
 # Task: Draw a GREEN rectangle with the same dimensions as the WHITE rectangle and
 #       touching the WHITE rectangle on the vertical side.
