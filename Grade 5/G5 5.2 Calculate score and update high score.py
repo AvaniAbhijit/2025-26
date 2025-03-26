@@ -141,7 +141,7 @@ while True:
 
         # Hide the segments
         for segment in segments:
-            segment.goto(1000, 1000)   #moving segments to off-screen location
+            segment.hideturtle()
 
         # Clear the segment list
         segments.clear()
@@ -159,7 +159,7 @@ while True:
 
             # Hide the segments
             for segment in segments:
-                segment.goto(1000, 1000)
+                segment.hideturtle()
 
             # Clear the segment list
             segments.clear()
