@@ -114,7 +114,7 @@ while True:
 
         # Hide the segments
         for segment in segments:
-            segment.goto(1000, 1000)   # moving segments to off-screen location
+            segment.hideturtle()   # moving segments to off-screen location
 
         # Clear the segment list
         segments.clear()
@@ -128,8 +128,8 @@ while True:
 
         # Hide the segments
 
-                                # moving segments to off-screen location
+                                # hide segment using hideturtle().
 
         # Clear the segment list
 
-    time.sleep(delay)   #  Adds a small delay to control speed of the snake head.
+    time.sleep(delay)   #  Adds a small delay to control the speed of the snake head.
