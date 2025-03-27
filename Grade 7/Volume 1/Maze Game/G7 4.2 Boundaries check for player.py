@@ -36,21 +36,21 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-        keys = pygame.key.get_pressed()
+    keys = pygame.key.get_pressed()
 
-        # Check if the left arrow key is pressed and the player is not at the left boundary.
-        if keys[pygame.K_LEFT] and x > 0:
-            x = x - 10   # Move the player 10 pixels to the left.
+    # Check if the left arrow key is pressed and the player is not at the left boundary.
+    if keys[pygame.K_LEFT] and x > 0:
+        x = x - 10   # Move the player 10 pixels to the left.
 
-        # Check if the right arrow key is pressed and the player is not at the right boundary.
-        if keys[pygame.K_RIGHT] and x < (screen_width-player.width):
-            x = x + 10  # Move the player 10 pixels to the right.
+    # Check if the right arrow key is pressed and the player is not at the right boundary.
+    if keys[pygame.K_RIGHT] and x < (screen_width-player.width):
+        x = x + 10  # Move the player 10 pixels to the right.
 
-        if keys[pygame.K_UP]:
-            y = y - 10
+    if keys[pygame.K_UP]:
+        y = y - 10
 
-        if keys[pygame.K_DOWN]:
-            y = y + 10
+    if keys[pygame.K_DOWN]:
+        y = y + 10
 
     screen.fill(WHITE)
 
