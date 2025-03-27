@@ -1,4 +1,3 @@
-
 # The main loop in a Pygame program keeps the game running.
 # It repeats again and again until the player decides to quit.
 # We need event handling to listen to the player clicks.
@@ -11,7 +10,7 @@
 import pygame
 pygame.init()
 
-screen_width = 600
+screen_width = 500
 screen_height = 500
 
 screen = pygame.display.set_mode((screen_width, screen_height))
