@@ -1,5 +1,7 @@
-# List of obstacles created using Rect objects on line 22.
-# To draw the obstacles on the game screen using a for loop on line 46.
+# List of obstacles created using Rect objects on line 23.
+# To draw the obstacles on the game screen using a for loop on line 40.
+# The green rectangle created is the "player" in this game on line 37.
+# The blue rectangle created on line 38 is the "win" area.
 
 # Task 1: Add another obstacle anywhere on the screen by modifying the obstacles list.
 # Task 2: Experiment with changing the screen size and ensure all elements adjust properly.
@@ -31,8 +33,8 @@ while running:
 
     screen.fill(WHITE)
 
-    pygame.draw.rect(screen, GREEN, (0, 450, 50, 50))
-    pygame.draw.rect(screen, BLUE, (450, 0, 50, 50))
+    player = pygame.draw.rect(screen, GREEN, (0, 450, 50, 50))
+    win = pygame.draw.rect(screen, BLUE, (450, 0, 50, 50))
 
     # Draw the obstacles in the maze using a loop
     for obstacle in obstacles:
