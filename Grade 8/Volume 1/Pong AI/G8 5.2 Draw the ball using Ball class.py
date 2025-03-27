@@ -1,8 +1,10 @@
 # Create a Ball class on line 48 to draw it on the screen.
-# pygame.draw.ellipse(screen, WHITE, self.rect) is a method to draw ellipse shape.
+# pygame.draw.ellipse(screen, WHITE, self.rect) is a method to draw an ellipse shape for the ball.
 # self.rect = pygame.Rect(x, y, 15, 15) is the rectangular area where the ball is drawn.
 
-# Task 1: Create a ball instance of Ball class at the center of the screen on line no.58
+# Task 1: Create a "Ball" class with an __init__ method. (on line 50),
+#         Inside __init__, create a rectangle (self.rect) using pygame.Rect(x, y, 15, 15) on line 51.
+#         Add a draw method that uses pygame.draw.ellipse(screen, WHITE, self.rect) to draw the ball on line 53 & 54.
 # Task 2 : Call ball.draw() in the game loop on line no.73
 
 import pygame
@@ -45,17 +47,15 @@ class Paddle:
         pygame.draw.rect(screen, WHITE, self.rect)  # Draw paddle
 
 # Ball class
-class Ball:
-    def __init__(self, x, y):
-        self.rect = pygame.Rect(x, y, 15, 15)  # Ball size
 
-    def draw(self):
-        pygame.draw.ellipse(screen, WHITE, self.rect)
+
+
+
 
 
 right_paddle = Paddle(screen_width - 40, rect_y)
 left_paddle = Paddle(20, rect_y)
-
+ball = Ball(screen_width//2,screen_height//2)
 
 # Main loop
 running = True
