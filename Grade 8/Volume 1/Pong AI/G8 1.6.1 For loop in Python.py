@@ -4,7 +4,7 @@
 
 # Task 1: Run the code and observe the output. 
 # Task 2: Uncomment lines no. 15 & 16, run the code, and observe the output.
-# Task 3: Change the range in the for loop on line 11 to print numbers from 120 to 145.
+# Task 3: Write the for loop to print numbers from 120 to 145 on line 17 onwards.
 
 
 # repeats 10 times from 1 to 10. The last number in a range is not included.
