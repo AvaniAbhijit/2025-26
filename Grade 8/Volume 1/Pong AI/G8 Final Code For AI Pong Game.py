@@ -83,15 +83,15 @@ class Ball:
     def move(self):
         # check collision with top MARGIN
         if self.rect.top < margin:
-            self.speed_y *= -1
+            self.speed_y = -self.speed_y 
         # check collision with the bottom of the screen
         if self.rect.top > screen_height:
-            self.speed_y *= -1
+           self.speed_y = -self.speed_y 
 
 
         # Checks if the ball collides with the right paddle or left paddle.
         if self.rect.colliderect(right_paddle) or self.rect.colliderect(left_paddle):
-            self.speed_x *= -1
+            self.speed_x = -self.speed_x
 
 
         # Move ball
