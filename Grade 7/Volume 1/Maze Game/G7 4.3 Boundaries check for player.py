@@ -29,7 +29,7 @@ obstacles = [
     pygame.Rect(180, 350, 200, 50),
     pygame.Rect(450, 420, 30, 200)
 ]
-
+clock = pygame.time.Clock()
 running = True
 while running:
     for event in pygame.event.get():
@@ -61,5 +61,5 @@ while running:
         pygame.draw.rect(screen, (197, 65, 23), obstacle)  # Draw obstacles in brown color
 
     pygame.display.update()
-
+    clock.tick(30)
 pygame.quit()
