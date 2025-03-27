@@ -1,9 +1,9 @@
 # Added the Clock to control frame rate on line 20 to 21.
 # Called clock.tick(fps)in the while loop to maintain the screen refresh rate.
-# self.rect.bottom < screen_height,checks paddle doesn't move down beyond the screen height on line 41.
-# and is logical operator in python, which checks both the conditions.
+# self.rect.bottom < screen_height, checks paddle doesn't move down beyond the screen height on line 41.
+# and is a logical operator in Python, which checks both the conditions.
 
-# Task : Check paddle doesnt move up beyond the margin line.(Hint :self.rect.top > 50) on line 39.
+# Task: Check paddle doesn't move up beyond the margin line on line 39.
 
 import pygame
 pygame.init()
