@@ -1,3 +1,9 @@
+# for loop on line 59 is used 
+#  to check if the player collides with any obstacle in the obstacles list.
+# colliderect method tells us if we collided with another rect object on line 61.
+
+# Task: Write the code to check the player collision with the win rectangle from line 65 onwards.
+
 import pygame
 pygame.init()
 
@@ -49,7 +55,15 @@ while running:
     for obstacle in obstacles:
         pygame.draw.rect(screen, (197, 65, 23), obstacle)  # Draw obstacles
 
+    # Player collision with obstacles
+    for obstacle in obstacles:
+        #colliderect method tell us, if we collided with another rect object.
+        if player.colliderect(obstacle):
+            running = False #we set the running to False, we will exit the for loop.
+    
+    # Player collision with win rectangle
+
+
     pygame.display.update()
     clock.tick(30)
 pygame.quit()
-
