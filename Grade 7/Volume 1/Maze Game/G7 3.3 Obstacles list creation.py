@@ -1,5 +1,6 @@
 # List of obstacles created using Rect objects on line 23.
-# To draw the obstacles on the game screen using a for loop on line 40.
+# Used a for loop to go through each obstacle in the list on line 41.
+# Draw the obstacles in brown color on the game screen using  pygame.draw.rect within the for loop on line 42.
 # The green rectangle created is the "player" in this game on line 37.
 # The blue rectangle created on line 38 is the "win" area.
 
