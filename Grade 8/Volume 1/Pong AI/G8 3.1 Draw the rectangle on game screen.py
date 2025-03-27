@@ -1,4 +1,4 @@
-# On line no 39 pygame.draw.rect() is used to draw a rectangle shape as a line.
+# On line no 39 pygame.draw.rect() is used to draw a rectangle shape.
 # This method takes 3 parameters:
 #   - where to draw: the screen object
 #   - Color of the shape: WHITE
