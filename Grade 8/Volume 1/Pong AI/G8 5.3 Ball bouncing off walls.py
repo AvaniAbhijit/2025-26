@@ -57,7 +57,7 @@ class Ball:
     def move(self):
         #check collision with top MARGIN
         if self.rect.top < margin:
-            self.speed_y *= -1
+            self.speed_y = -self.speed_y 
         #check collision with bottom of the screen
 
         
