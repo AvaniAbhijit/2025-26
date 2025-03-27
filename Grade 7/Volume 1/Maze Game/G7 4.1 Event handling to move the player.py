@@ -39,17 +39,17 @@ while running:
         if event.type == pygame.QUIT:  # Checks if the close button is clicked
             running = False
 
-        keys = pygame.key.get_pressed()  # Get the keys that are pressed on the keyboard.
+    keys = pygame.key.get_pressed()  # Get the keys that are pressed on the keyboard.
 
-        # If the left arrow key is pressed, move the player to the left.
-        if keys[pygame.K_LEFT]:
-            # We decrease the x-coordinate by 10 to move left.
-            x = x - 10
+    # If the left arrow key is pressed, move the player to the left.
+    if keys[pygame.K_LEFT]:
+        # We decrease the x-coordinate by 10 to move left.
+        x = x - 10
 
-        # If the right arrow key is pressed, move the player to the right.
-        if keys[pygame.K_RIGHT]:
-            # We increase the x-coordinate by 10 to move right.
-            x = x + 10
+    # If the right arrow key is pressed, move the player to the right.
+    if keys[pygame.K_RIGHT]:
+        # We increase the x-coordinate by 10 to move right.
+        x = x + 10
 
     screen.fill(WHITE)
 
