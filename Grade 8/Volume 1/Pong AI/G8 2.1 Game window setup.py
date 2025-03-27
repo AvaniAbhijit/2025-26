@@ -16,4 +16,4 @@ pygame.init()
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 # Set the title of the game window to 'Pong'
-pygame.display.set_caption('Pong')
+pygame.display.set_caption('Pong AI Game')
