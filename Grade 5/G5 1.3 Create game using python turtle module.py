@@ -1,173 +1,152 @@
-# The Python turtle module can be used to make games.
-
-#Task: Run the code and see the output.
+# Using python, we can create games.
+# Task: Run the code and check the output
 
 import turtle
-import time
 import random
+import time
 
-delay = 0.1
+# Screen setup
+screen = turtle.Screen()
+screen.title("Space Shooter")
+screen.bgcolor("black")
+screen.setup(width=800, height=600)
+screen.tracer(0)
 
-# Set up the screen
-t = turtle.Screen()
-t.title("Snake Game")
-t.bgcolor("Dark Green")
-t.setup(width=600, height=600)
-#t.tracer(0)
+# Spaceship
+spaceship = turtle.Turtle()
+spaceship.shape("triangle")
+spaceship.color("white")
+spaceship.penup()
+spaceship.goto(0, -250)
+spaceship.setheading(90)
 
-# Snake Head
-head = turtle.Turtle()
-head.speed(0)
-head.shape("square")
-head.color("black")
-head.penup()
-head.goto(0, 100)
-head.direction = "stop"
+# Controls
+def move_left():
+    x = spaceship.xcor()
+    x -= 10  # Reduced speed
+    if x > -370:
+        spaceship.setx(x)
 
-# Snake food
-food = turtle.Turtle()
-food.speed(0)
-food.shape("circle")
-food.color("red")
-food.penup()
-food.shapesize(0.85, 0.85)
-food.goto(0, 0)
+def move_right():
+    x = spaceship.xcor()
+    x += 10  # Reduced speed
+    if x < 370:
+        spaceship.setx(x)
 
-# Score
+screen.listen()
+screen.onkey(move_left, "Left")
+screen.onkey(move_right, "Right")
+
+# Bullet
+class Bullet(turtle.Turtle):
+    def __init__(self):
+        super().__init__()
+        self.shape("square")
+        self.color("yellow")
+        self.penup()
+        self.speed(0)
+        self.shapesize(stretch_wid=0.5, stretch_len=1)
+        self.goto(0, -400)  # Offscreen initially
+        self.hideturtle()  # Hide the bullet initially
+
+    def fire(self, x, y):
+        self.goto(x, y)
+        self.setheading(90)
+        self.showturtle()
+
+    def move(self):
+        self.sety(self.ycor() + 10)  # Slower bullet speed
+        if self.ycor() > 300:
+            self.hideturtle()
+
+# Initialize bullets
+bullet = Bullet()
+
+def fire_bullet():
+    if not bullet.isvisible():  # Only fire if the bullet is not currently visible
+        bullet.fire(spaceship.xcor(), spaceship.ycor() + 20)
+
+screen.onkey(fire_bullet, "space")
+
+# Enemy
+class Enemy(turtle.Turtle):
+    def __init__(self):
+        super().__init__()
+        self.shape("circle")
+        self.color("red")
+        self.penup()
+        self.speed(0)
+        self.goto(random.randint(-350, 350), random.randint(100, 250))
+
+    def move(self):
+        self.sety(self.ycor() - 5)  # Slower enemy movement
+        if self.ycor() < -300:
+            self.goto(random.randint(-350, 350), random.randint(100, 250))
+
+# Create enemies
+enemies = []
+
+for _ in range(5):
+    enemy = Enemy()
+    enemies.append(enemy)
+
+# Scoring
 score = 0
-high_score = 0
+score_display = turtle.Turtle()
+score_display.speed(0)
+score_display.color("white")
+score_display.penup()
+score_display.hideturtle()
+score_display.goto(0, 260)
+score_display.write("Score: {}".format(score), align="center", font=("Courier", 24, "normal"))
 
-pen = turtle.Turtle()
-pen.speed(0)
-pen.shape("square")
-pen.color("white")
-pen.penup()
-pen.hideturtle()
-pen.goto(0, 260)
-pen.write("Score: 0 High Score: {}".format(high_score), align="center", font=("Courier", 24, "normal"))
+def update_score():
+    global score
+    score += 10
+    score_display.clear()
+    score_display.write("Score: {}".format(score), align="center", font=("Courier", 24, "normal"))
 
-# Snake segments
-segments = []
+# Collision detection
+def check_collision():
+    global score
+    if bullet.isvisible():  # Only check collisions if the bullet is visible
+        for enemy in enemies:
+            if bullet.distance(enemy) < 20:
+                enemy.goto(random.randint(-350, 350), random.randint(100, 250))
+                bullet.hideturtle()  # Hide the bullet once it hits the enemy
+                update_score()
+                break
 
-# Functions for movement
-def move():
-    if head.direction == "up":
-        y = head.ycor()
-        head.sety(y + 20)
+    # Check collision between spaceship and enemies
+    for enemy in enemies:
+        if spaceship.distance(enemy) < 20:
+            reset_game()
+            break
 
-    if head.direction == "down":
-        y = head.ycor()
-        head.sety(y - 20)
+# Reset the game or reduce score
+def reset_game():
+    global score
+    score -= 5  # Reduce the score when spaceship touches an enemy
+    if score < 0:
+        score = 0  # Avoid negative score
+    score_display.clear()
+    score_display.write("Score: {}".format(score), align="center", font=("Courier", 24, "normal"))
 
-    if head.direction == "right":
-        x = head.xcor()
-        head.setx(x + 20)
+    spaceship.goto(0, -250)  # Reset spaceship position
+    spaceship.setheading(90)  # Reset direction
 
-    if head.direction == "left":
-        x = head.xcor()
-        head.setx(x - 20)
+# Game loop
+game_on = True
+while game_on:
+    screen.update()
+    time.sleep(0.05)  # Increased delay to slow down the game
 
-def go_up():
-    if head.direction != "down":
-        head.direction = "up"
+    # Move enemies
+    for enemy in enemies:
+        enemy.move()
 
-def go_down():
-    if head.direction != "up":
-        head.direction = "down"
+    # Move bullet
+    bullet.move()
 
-def go_right():
-    if head.direction != "left":
-        head.direction = "right"
-
-def go_left():
-    if head.direction != "right":
-        head.direction = "left"
-
-# Keyboard bindings
-t.listen()
-t.onkey(go_up, "w")
-t.onkey(go_down, "s")
-t.onkey(go_right, "d")
-t.onkey(go_left, "a")
-
-# Main game loop
-while True:
-    t.update()
-
-    # Check for collision with food
-    if head.distance(food) < 15:
-        # Move the food to a random position
-        x = random.randint(-290, 290)
-        y = random.randint(-290, 290)
-        food.goto(x, y)
-
-        # Add a segment to the snake
-        new_segment = turtle.Turtle()
-        new_segment.speed(0)
-        new_segment.shape("square")
-        new_segment.color("grey")
-        new_segment.penup()
-        segments.append(new_segment)
-
-        # Increase the score
-        score += 10
-        if score > high_score:
-            high_score = score
-
-        # Update score display
-        pen.clear()
-        pen.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
-
-    # Move the snake segments
-    for index in range(len(segments) - 1, 0, -1):
-        x = segments[index - 1].xcor()
-        y = segments[index - 1].ycor()
-        segments[index].goto(x, y)
-
-    if len(segments) > 0:
-        x = head.xcor()
-        y = head.ycor()
-        segments[0].goto(x, y)
-
-    move()
-
-    # Check for collision with the wall
-    if head.xcor() > 290 or head.xcor() < -290 or head.ycor() > 290 or head.ycor() < -290:
-        time.sleep(1)
-        head.goto(0, 0)
-        head.direction = "stop"
-
-        # Hide the segments
-        for segment in segments:
-            segment.goto(1000, 1000)
-
-        # Clear the segment list
-        segments.clear()
-
-        # Reset score
-        score = 0
-        pen.clear()
-        pen.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
-
-    # Check for collision with the snake itself
-    for segment in segments:
-        if segment.distance(head) < 20:
-            time.sleep(1)
-            head.goto(0, 0)
-            head.direction = "stop"
-
-            # Hide the segments
-            for segment in segments:
-                segment.goto(1000, 1000)
-
-            # Clear the segment list
-            segments.clear()
-
-            # Reset score
-            score = 0
-            pen.clear()
-            pen.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
-
-    time.sleep(delay)
-
-win.mainloop()
+    # Check for collisions
+    check_collision()
