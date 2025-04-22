@@ -6,7 +6,7 @@
 
 #Task 1: Import the turtle module using the import command.
 
-#Task 2: Create a screen object using turtle.Screen().
+#Task 2: Create a screen object using turtle.Screen() and store in a screen variable.
 
 #Task 3: Set the title to "Fruit Catcher Game" using .title().
 
