@@ -16,7 +16,13 @@ basket.shapesize(1,5)
 basket.penup()
 basket.goto(0, -250)
 
+# Set a flag to keep the game running
 game_on = True
+
+# Start the game loop
 while game_on:
+    # Update the screen continuously to reflect any changes
     screen.update()
+
+# Keep the window open until the user closes it
 screen.mainloop()
