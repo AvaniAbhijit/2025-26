@@ -17,3 +17,22 @@ screen.title("Fruit Catcher Game")
 screen.bgcolor("lightblue")
 screen.setup(width=800, height=600)
 screen.tracer(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+screen.update()
