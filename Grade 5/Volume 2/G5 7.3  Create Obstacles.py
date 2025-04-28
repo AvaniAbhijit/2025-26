@@ -38,7 +38,7 @@ screen.onkey(move_left, "Left")
 screen.onkey(move_right, "Right")
 
 fruits=[]
-fruit_colors =
+fruit_colors =["red", "yellow", "green", "orange"]
 
 def create_fruit():
     fruit = turtle.Turtle()
