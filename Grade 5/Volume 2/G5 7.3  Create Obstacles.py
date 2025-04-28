@@ -61,5 +61,7 @@ while game_on:
     # This line gives a 1 in 20 chance to create a new fruit on each check
     if random.randint(1, 20) == 1:
         create_fruit()
+    if random.randint(1, 40) == 1:         # Obstacles appear less frequently
+        create_obstacle()            
     screen.update()
 screen.mainloop()
