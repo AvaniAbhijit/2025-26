@@ -1,16 +1,18 @@
-#move_fruits() function on line 65 moves each fruit down.
-#on line 67 each fruits y-coordinates changed by 10 pixels.
-#If a fruit goes below the bottom of the screen (y = -300)on line 68,
-#it is hidden and removed from the list to keep the game clean on line 69 & 70.
+# move_fruits() function on line 67 moves each fruit down.
+# On line 69, each fruit's y-coordinates changed by 10 pixels.
+# If a fruit goes below the bottom of the screen (y = -300)on line 70,
+# it is hidden and removed from the list to keep the game clean on lines 71 & 72.
+# The time module in Python provides functions to work with time, such as pausing the program (sleep).
 
 #Task 1: Create a similar function called move_obstacle() that:
-#        Moves each obstacles down by 10 pixel.
-#        If a obstacle goes below the bottom of the screen (y = -300),
-#        it is hidden and removed from the obstacle_list to keep the game clean.
+#        Moves each obstacles down by 10 pixels.
+#        If an obstacle goes below the bottom of the screen (y = -300),
+#        It is hidden and removed from the obstacle_list to keep the game clean.
 
 
 import turtle
 import random
+import time
 screen = turtle.Screen()
 screen.title("Fruit Catcher Game")
 screen.bgcolor("lightblue")
@@ -78,10 +80,13 @@ def move_fruits():
 
 game_on = True
 while game_on:
+    time.sleep(0.05)   # Pause the program for 0.05 seconds to control the speed of the game's updates
     # This line gives a 1 in 20 chance to create a new fruit on each check
     if random.randint(1, 20) == 1:
         create_fruit()
     if random.randint(1, 40) == 1:
         create_obstacle()
+    move_fruits()
+    move_obstacle()
     screen.update()
 screen.mainloop()
