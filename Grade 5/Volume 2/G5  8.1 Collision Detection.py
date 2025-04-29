@@ -97,5 +97,6 @@ while game_on:
         create_obstacle()
     move_fruits()
     move_obstacle()
+    check_collision()
     screen.update()
 screen.mainloop()
