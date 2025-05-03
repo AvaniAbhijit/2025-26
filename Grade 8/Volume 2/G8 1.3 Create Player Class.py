@@ -11,7 +11,7 @@
 #         self.rect.center: (x, y) -  these parameters are passed while instantiating the object.
 #         self.vel_y: 0
 #         self.flip: False
-# Task 2: Create a player object of the Player class on line 54.
+# Task 2:Create player object at center horizontally and 150px above bottom on line 54.
 # Task 3: Use blit() function to draw the bg_image on screen at (0,0) on line 60.
 
 import pygame
