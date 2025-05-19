@@ -7,9 +7,48 @@
 
 import pygame
 pygame.init()
-screen = pygame.display.set_mode((400, 400))
 
-original_image = pygame.image.load('land.png').convert_alpha()
+# game window dimensions
+SCREEN_WIDTH = 400
+SCREEN_HEIGHT = 600
+
+# define colours
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+SKY_BLUE = (153, 217, 234)
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption('Toggle Jump')
+
+# set frame rate
+clock = pygame.time.Clock()
+FPS = 60
+
+# load images
+player_image = pygame.image.load('astronaut.png').convert_alpha()  # player image
+bg_image = pygame.image.load('space.png').convert_alpha()          # background image
+bg_image = pygame.transform.scale(bg_image, (SCREEN_WIDTH, SCREEN_HEIGHT))  # scaled to screen
+platform_image = pygame.image.load('land.png').convert_alpha()
+
+# --- Player class using pygame.sprite.Sprite ---
+class Player(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        pygame.sprite.Sprite.__init__(self)  # Initialize Sprite class
+        self.image = pygame.transform.scale(player_image, (45, 45))  # Set image
+        self.width = 25
+        self.height = 40
+        self.rect = pygame.Rect(0, 0, self.width, self.height)
+        self.rect.center = (x, y)
+        self.vel_y = 0
+        self.flip = False
+
+    def draw(self):
+        screen.blit(self.image, (self.rect.x - 12, self.rect.y - 5))
+
+# --- Create player sprite  ---
+player = Player(SCREEN_WIDTH // 2, SCREEN_HEIGHT - 150)
+
+
 
 class Platform(pygame.sprite.Sprite):
     def __init__(self, x, y, size):  # Note: fixed typo from _init_ to __init__
@@ -30,13 +69,16 @@ platform_group.add(small_platform, large_platform)  # Add both platforms to the 
 # Main game loop
 running = True
 while running:
+    clock.tick(FPS)
+
+    # Draw the background
+    screen.blit(bg_image, (0, 0))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-    screen.fill((240, 240, 240))
-
     platform_group.draw(screen)  # Draw all platform sprites in the group with one line
+    player.draw()
     pygame.display.update()
 
 pygame.quit()
