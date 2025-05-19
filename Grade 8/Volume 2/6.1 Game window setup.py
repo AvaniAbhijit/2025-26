@@ -17,7 +17,7 @@
 
 
 
-# create a pygame screen
+# Create a pygame screen
 
 # Set the title of the screen
 
