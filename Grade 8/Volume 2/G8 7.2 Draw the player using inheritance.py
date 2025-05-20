@@ -1,5 +1,10 @@
-# A sprite in Pygame is a 2D game object that includes an image and a rectangle
-#(image and rect) for drawing & managed efficiently using the pygame.sprite.Sprite class on line 31.
+# Parent Class: pygame.sprite.Sprite is the parent class that provides built-in methods and properties to manage game sprites, 
+# such as grouping, drawing, and updating.
+
+# Child Class: Player is the child class that inherits all the features of pygame.sprite.Sprite. 
+# This means Player can be added to sprite groups and benefit from sprite-handling functionality in Pygame.
+
+# Constructor Call: pygame.sprite.Sprite.__init__(self) explicitly calls the constructor of the parent class to ensure proper initialization.
 
 import pygame
 
