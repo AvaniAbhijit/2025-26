@@ -17,7 +17,7 @@
 import pygame
 
 pygame.init()
-pygame.mixer.init()
+
 
 #game window dimensions
 SCREEN_WIDTH = 400
