@@ -4,10 +4,10 @@
 #self.rect.x += dx moves the player horizontally based on dx on line 104.
 
 #Task 1 : Write the code If D (K_d) is pressed → move right by dx = 10, and
-#       self.flip = True to face right on line 72 onwords.
-#Task 2 : Write the code make sure the player doesn't move beyond the right edge of the screen.
-#        Hint : dx = SCREEN_WIDTH - self.rect.right on line 86 onwords.
-# Task 3 : Change the value of dx=10 to 5 pixels and observe the change on line 68 and 73.
+#       self.flip = True to face right on line 72 onwards.
+#Task 2: Write the code to make sure the player doesn't move beyond the right edge of the screen.
+#        Hint: dx = SCREEN_WIDTH - self.rect.right on line 86 onwards.
+# Task 3: Change the value of dx=10 to 5 pixels and observe the change on lines 68 and 73.
 
 
 import pygame
