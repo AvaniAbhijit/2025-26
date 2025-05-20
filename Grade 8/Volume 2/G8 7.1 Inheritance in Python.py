@@ -10,6 +10,10 @@
 # Method Overriding: Dog class overrides the inherited method to customize behavior.
 # Object Creation and Method Calling: Shows how objects use the correct method based on their class.
 
+# Task 1: Create another derived class called Cat that inherits from Animal.
+#         Override the sound() method to print: "Whiskers says Meow!"
+# Task 2: Create an object of the Cat class and call the sound() method.
+
 import pygame
 
 # Create a base class (just like Sprite)
