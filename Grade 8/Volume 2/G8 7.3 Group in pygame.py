@@ -1,9 +1,7 @@
-# __init__ method on line 15 Accepts x, y, and size as arguments.
-# Scales the platform image to the specified size.
-# Positions the platform at (x, y) on the screen.
-# Makes the object ready to be added to a sprite group.
-# pygame.sprite.Group() lets you treat multiple sprites as one unit for drawing and updating.
-
+# This code defines a Platform class that inherits from pygame.sprite.Sprite is used to handle platform objects in a game.
+# Two platforms of different sizes are created and added to a sprite group for easy management. 
+# This group allows drawing and updating all platforms together efficiently.
+# Using platform_group.add(...), we add the small_platform and large_platform to this group.
 
 import pygame
 pygame.init()
@@ -11,21 +9,21 @@ screen = pygame.display.set_mode((400, 400))
 
 original_image = pygame.image.load('land.png').convert_alpha()
 
-class Platform(pygame.sprite.Sprite):
-    def __init__(self, x, y, size):  # Note: fixed typo from _init_ to __init__
-        pygame.sprite.Sprite.__init__(self)  # Initialize the parent Sprite class
-        self.image = pygame.transform.scale(original_image, size)  # Resize image to given size
-        self.rect = self.image.get_rect()  # Get rectangle for positioning
-        self.rect.topleft = (x, y)  # Set the top-left position
+class Platform(pygame.sprite.Sprite):  # Platform inherits from Pygame's Sprite class
+    def __init__(self, x, y, size):
+        pygame.sprite.Sprite.__init__(self)  # Call parent constructor
+        self.image = pygame.transform.scale(original_image, size)  # Set and scale the platform image
+        self.rect = self.image.get_rect()  # Get rectangular area for positioning
+        self.rect.topleft = (x, y)  # Place the platform at (x, y)
 
-# Create two platform objects with different sizes
-small_platform = Platform(50, 50, (50,10))   # Small platform
-large_platform = Platform(200, 200, (60,30))  # Larger platform
+# Create two platform objects with specific sizes
+small_platform = Platform(50, 50, (50,10))    # First platform, smaller in size
+large_platform = Platform(200, 200, (60,30))  # Second platform, slightly larger
 
-# Group the platforms using pygame.sprite.Group()
-# This allows you to manage and draw multiple sprites together
+# Add platforms to a group for easier handling and drawing
 platform_group = pygame.sprite.Group()
-platform_group.add(small_platform, large_platform)  # Add both platforms to the group
+platform_group.add(small_platform, large_platform)
+
 
 # Main game loop
 running = True
