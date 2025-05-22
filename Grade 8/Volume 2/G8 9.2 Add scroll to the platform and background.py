@@ -1,9 +1,15 @@
 # Logic from 148 to 151 is commonly used in vertical-scrolling games to give the
 # illusion of continuous movement.
-# -dy makes the background move down when the player moves up, creating a scrolling
-# effect on line 103.
+# SCROLL_THRESH: How close to the top the player can go before we begin scrolling the screen.
+# scroll: How much to move the background and platforms this frame?
+# bg_scroll: The cumulative scroll amount to draw the background with a looping effect.
+# If the player's top goes above the scroll threshold (200 px from the top), 
+# and the player is moving up (vel_y < 0):
+# We set scroll = -dy, which inverts the player's vertical movement.
+# This makes the player stay near the top and instead moves the rest of the game downward.
 
-
+# Task: Change Scroll Threshold: Change how high the player can go before the screen scrolls.
+#         Observe: What happens when the player jumps?
 
 
 import pygame
