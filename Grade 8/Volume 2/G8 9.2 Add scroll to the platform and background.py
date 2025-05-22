@@ -125,6 +125,9 @@ class Platform(pygame.sprite.Sprite):
         self.rect.x = x
         self.rect.y = y
 
+    def update(self):
+	    if self.rect.top > SCREEN_HEIGHT:
+		    self.kill()
 
 # Sprite groups
 platform_group = pygame.sprite.Group()
