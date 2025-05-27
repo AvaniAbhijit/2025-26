@@ -1,10 +1,10 @@
-# on line 9 The function pygame.mixer.init() initializes the mixer module in Pygame,
+# On line 13, the function pygame.mixer.init() initializes the mixer module in Pygame,
 # which is responsible for handling sound and music playback.
-# From line 46 to 52 The code loads and plays background music in a loop at 60% volume
+# From line 51 to 59, the code loads and plays background music in a loop at 60% volume
 # and also loads jump and death sound effects at 50% volume each. These sounds can be triggered
-# in-game using .play() method like jump_fx.play().
+# in-game using .play() method, like jump_fx.play().
 
-# Task - Change the music and run the code.
+# Task - Download the music of your choice and change the music.
 
 import pygame
 import random
@@ -43,13 +43,21 @@ bg_image = pygame.transform.scale(bg_image, (SCREEN_WIDTH, SCREEN_HEIGHT))
 platform_image = pygame.image.load('land.png').convert_alpha()
 
 #load music and sounds
+# Load background music and set its volume
 pygame.mixer.music.load('bg_music.mp3')
 pygame.mixer.music.set_volume(0.6)
+
+# Play background music infinitely starting at the beginning
 pygame.mixer.music.play(-1, 0.0)
+
+# Load jump sound effect and set its volume
 jump_fx = pygame.mixer.Sound('jump.mp3')
 jump_fx.set_volume(0.5)
+
+# Load death sound effect and set its volume
 death_fx = pygame.mixer.Sound('death.mp3')
 death_fx.set_volume(0.5)
+
 
 #function for drawing the background
 def draw_bg(bg_scroll):
@@ -180,10 +188,11 @@ while run:
     # Update and draw
     platform_group.draw(screen)
     player.draw()
+    # Check if the player has fallen below the bottom of the screen
     if player.rect.top > SCREEN_HEIGHT:
-        death_fx.play()
-        pygame.time.delay(1000)
-        run=False
+        death_fx.play()            # Play death sound effect
+        pygame.time.delay(1000)    # Pause the game for 1 second to let the sound play
+        run = False                # Exit the game loop to end the game
     pygame.display.update()
 
 pygame.quit()
