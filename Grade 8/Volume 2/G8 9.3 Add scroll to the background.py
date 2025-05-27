@@ -1,19 +1,16 @@
-# Logic from 148 to 151 is commonly used in vertical-scrolling games to give the
-# illusion of continuous movement.
-# -dy makes the background move down when the player moves up, creating a scrolling
-# effect on line 103.
-
-
+# def draw_bg function on line 42 draws the background image twice — once at bg_scroll and 
+# once at -600 + bg_scroll — to create a continuous vertical scrolling effect. 
+# As bg_scroll increases, the images move downward, and when one image scrolls out of view, 
+# the second image appears seamlessly, simulating an infinite background.
+# bg_scroll += scroll on line 154 moves the background based on the player's movement.
+# If bg_scroll reaches 600 (height of the screen), 
+# it resets to 0 to loop the background image seamlessly, enabling infinite vertical scrolling.
 
 
 import pygame
 import random
 
 pygame.init()
-pygame.mixer.init()
-
-score = 0
-game_over = False
 
 # Game window dimensions
 SCREEN_WIDTH = 400
@@ -44,31 +41,11 @@ bg_image = pygame.image.load('space.png').convert_alpha()
 bg_image = pygame.transform.scale(bg_image, (SCREEN_WIDTH, SCREEN_HEIGHT))
 platform_image = pygame.image.load('land.png').convert_alpha()
 
-#load music and sounds
-pygame.mixer.music.load('bg_music.mp3')
-pygame.mixer.music.set_volume(0.6)
-pygame.mixer.music.play(-1, 0.0)
-jump_fx = pygame.mixer.Sound('jump.mp3')
-jump_fx.set_volume(0.5)
-death_fx = pygame.mixer.Sound('death.mp3')
-death_fx.set_volume(0.5)
-
-
-#function for outputting text onto the screen
-def draw_text(text, font, text_col, x, y):
-	img = font.render(text, True, text_col)
-	screen.blit(img, (x, y))
-
-#function for drawing info panel
-def draw_panel():
-	pygame.draw.rect(screen, BLACK, (0, 0, SCREEN_WIDTH, 30))
-	draw_text('SCORE: ' + str(score), font_small, WHITE, 0, 0)
-	
 #function for drawing the background
 def draw_bg(bg_scroll):
 	screen.blit(bg_image, (0, 0 + bg_scroll))
 	screen.blit(bg_image, (0, -600 + bg_scroll))
-
+    
 # Player class
 class Player(pygame.sprite.Sprite):
     def __init__(self, x, y):
@@ -85,7 +62,7 @@ class Player(pygame.sprite.Sprite):
         # Reset movement variables
         dx = 0
         dy = 0
-        scroll = 0
+        scroll = 0  # reset scroll
 
         key = pygame.key.get_pressed()
 
@@ -119,14 +96,12 @@ class Player(pygame.sprite.Sprite):
                         self.rect.bottom = platform.rect.top
                         dy = 0
                         self.vel_y = -20
-                        jump_fx.play()
 
         #check if the player has bounced to the top of the screen
         if self.rect.top <= SCROLL_THRESH:
             if self.vel_y < 0:
-                #Invert the vertical movement (dy) to scroll the background upward as the
-                # player moves up.
                 scroll = -dy
+         
 
         # Apply movement
         self.rect.y += dy + scroll
@@ -151,24 +126,10 @@ class Platform(pygame.sprite.Sprite):
         self.rect.y = y
 
     def update(self, scroll):
-		#moving platform side to side if it is a moving platform
-		if self.moving == True:
-			self.move_counter += 1
-			self.rect.x += self.direction * self.speed
-
-		#change platform direction if it has moved fully or hit a wall
-		if self.move_counter >= 100 or self.rect.left < 0 or self.rect.right > SCREEN_WIDTH:
-			self.direction *= -1
-			self.move_counter = 0
-
-		#update platform's vertical position
-		self.rect.y += scroll
-
-		#check if platform has gone off the screen
-		if self.rect.top > SCREEN_HEIGHT:
-			self.kill()
-
-
+	    #update platform's vertical position
+        self.rect.y += scroll
+        if self.rect.top > SCREEN_HEIGHT:
+            self.kill()
 
 # Sprite groups
 platform_group = pygame.sprite.Group()
@@ -189,13 +150,12 @@ while run:
             run = False
 
     scroll = player.move()  # Moves the player and returns how much the screen should scroll (typically upward).
-
-    # draw background
-    bg_scroll += scroll      # Adds the scroll amount to the background scroll position.
-    if bg_scroll >= 600:     # If the background scroll goes beyond the screen height,
-        bg_scroll = 0        # reset it to 0 to create a looping background effect.
-    draw_bg(bg_scroll)       # Draws the background image at the new scroll position.
-
+    #draw background
+    bg_scroll += scroll
+    if bg_scroll >= 600:
+        bg_scroll = 0
+    draw_bg(bg_scroll)
+    
     if len(platform_group) < MAX_PLATFORMS:
 
         p_w = random.randint(40, 60)
@@ -204,13 +164,10 @@ while run:
         platform = Platform(p_x, p_y, p_w)
         platform_group.add(platform)
 
-    if scroll > 0:
-        score += scroll
+    platform_group.update(scroll)
     # Update and draw
-    player.move()
     platform_group.draw(screen)
     player.draw()
-
 
     pygame.display.update()
 
