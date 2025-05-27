@@ -1,12 +1,11 @@
-# Code from line no 138 to 154 generates new platforms if there are fewer than the maximum allowed,
+# Code from line no 131 to 147 generates new platforms if there are fewer than the maximum allowed,
 # with random width and horizontal position within the screen.
 # Each new platform is placed above the previous one at a random vertical distance.
-# def update(self): defines an update method that will be called (if explicitly used) to handle changes in the platform's 
-# state during each frame of the game loop.
+
 
 # Task 1: Experiment by changing the range of platform widths (p_w) from 40-60 to 20-80.
 # Observe how the platforms change in the game.
-# Task 2: Change the value of MAX_PLATFORMS on line 34 and observe the change.
+# Task 2: Change the value of MAX_PLATFORMS on line 33 and observe the change.
 
 
 import pygame
@@ -106,12 +105,6 @@ class Platform(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
-
-    def update(self):
-     
-		#check if the platform has gone off the screen
-		if self.rect.top > SCREEN_HEIGHT:
-			self.kill()
 
 
 # Sprite groups
