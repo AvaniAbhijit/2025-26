@@ -1,6 +1,6 @@
 # score_display.write sets up a text display at the top of the screen
-# to show the player's score on line 34.
-# The update_score() function updates this text every time the score changes,on line 105.
+# to show the player's score on line 31.
+# The update_score() function updates this text every time the score changes, on line 105.
 
 #Task 1: Set the text color to black for score_display turtle on line 28.
 #Task 2: Lift the pen so it doesn't draw lines on line 29.
