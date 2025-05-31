@@ -6,7 +6,7 @@
 
 #Task 1: Run the code and observe the output.
 #Task 2: Change the size and position of the basket.
-#Task 3: Change game_on to False on line no 19.
+#Task 3: Change game_on to False on line no 26.
 
 import turtle
 screen = turtle.Screen()
