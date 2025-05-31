@@ -1,3 +1,7 @@
+# create_obstacle() function is same as create_fruit() function. 
+# Obstacles are black triangle shapes created in a random position.
+# obstacle_list is a list which used to store the obstacles created.
+
 # Task 1: Create an empty list called obstacle_list.
 # Task 2: Write a function called create_obstacle() that:
 #         Creates a new turtle object obstacle.
