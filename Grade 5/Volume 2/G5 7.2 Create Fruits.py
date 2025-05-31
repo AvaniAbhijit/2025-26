@@ -1,10 +1,17 @@
-#on line 52 ,random.randint randomly creates a fruit with a 1 in 20 chance during each iteration.
+# random is a Python module that lets you work with random numbers.
+# import it using import random to use its features on line 13.
+# random.choice(fruit_colors) picks one color randomly from fruit_colors list on line 51.
+# random.randint(-350, 350) randomly picks an X position (left to right) on line 53.
+# The Y position 300 means the fruit starts high up on the screen (top area)  on line 53.
+# on line 59, random.randint randomly creates a fruit with a 1 in 20 chance during each iteration.
 
-# Task 1: Create an empty list (fruits) to store fruit objects
-# Task 2: Define a list of possible fruit_colors ["red", "yellow", "green", "orange"]
+
+# Task 1: Create an empty list (fruits) to store fruit objects on line 44.
+# Task 2: Define a list of possible fruit_colors ["red", "yellow", "green", "orange"] on line 46.
 
 import turtle
 import random
+
 screen = turtle.Screen()
 screen.title("Fruit Catcher Game")
 screen.bgcolor("lightblue")
