@@ -1,5 +1,5 @@
-# random is a Python module that lets you work with random numbers.
-# import it using import random to use its features on line 13.
+# create_fruit function creates a random fruit with random colours & random position from line 48 onwards.
+# random is a Python module that has functions to generate random numbers. To use it, import it on line 13.
 # random.choice(fruit_colors) picks one color randomly from fruit_colors list on line 51.
 # random.randint(-350, 350) randomly picks an X position (left to right) on line 53.
 # The Y position 300 means the fruit starts high up on the screen (top area)  on line 53.
