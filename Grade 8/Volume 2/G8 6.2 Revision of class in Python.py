@@ -8,7 +8,7 @@
 #Task 1 : Create two more people: person4 with name "David" and age 28,
 #        and person5 with name "Emma" and age 19. Call greet() and celebrate_birthday() on both.
 # Task 2: Add a new method in the Person class called show_info() that prints:
-# Define a Person class with attributes name and age, and methods to greet and celebrate a birthday.
+#         Define a Person class with attributes name and age, and methods to greet and celebrate a birthday.
 
 class Person:
   def __init__(self, name,age):
