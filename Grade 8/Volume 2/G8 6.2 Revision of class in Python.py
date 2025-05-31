@@ -1,8 +1,8 @@
-#This code defines a class Person with a constructor to set name and age,
-#and two methods: greet and celebrate_birthday.
-#Two objects person1 and person2 are created with different names and ages.
-#The attributes (name and age) are accessed and printed directly.
-#The methods greet and celebrate_birthday are called to show behavior based on the object's data.
+# This code defines a class Person with a constructor to set name and age,
+# and two methods: greet and celebrate_birthday.
+# Two objects person1 and person2 are created with different names and ages.
+# The attributes (name and age) are accessed and printed directly.
+# The methods greet and celebrate_birthday are called to show behavior based on the object's data.
 
 
 #Task 1 : Create two more people: person4 with name "David" and age 28,
