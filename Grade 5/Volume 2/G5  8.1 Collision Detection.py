@@ -1,9 +1,9 @@
-#check_collision() function checks for collisions between the basket and fruits/obstacles On line 78.
-#from line 79 to 83 checks if any fruit touches the basket.
-# If a fruit is close enough, it hides the fruit, removes it from the list,
+# check_collision() function checks for collisions between the basket and fruits/obstacles on line 78.
+# from line 79 to 83 checks if any fruit touches the basket.
+# If a fruit is less than 50 pixels from the basket, it hides the fruit, removes it from the list,
 
-# Task : Write the code from line 85 to check - if any obstacles touches the basket.
-#         If a obstacle is close enough, it hides the obstacle, removes it from the obstacle_list.
+# Task: Write the code from line 85 to check if any obstacles touch the basket.
+#         If an obstacle is less than 50 pixels from the basket, it hides the obstacle, removes it from the obstacle_list.
 
 import turtle
 import random
