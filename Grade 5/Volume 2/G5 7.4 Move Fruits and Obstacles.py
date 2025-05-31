@@ -1,4 +1,4 @@
-# move_fruits() function on line 67 moves each fruit down.
+# move_fruits() function on line 67 moves each fruit down using a for loop.
 # On line 69, each fruit's y-coordinates changed by 10 pixels.
 # If a fruit goes below the bottom of the screen (y = -300)on line 70,
 # it is hidden and removed from the list to keep the game clean on lines 71 & 72.
