@@ -1,18 +1,20 @@
 #RECAP : 
-#turtle.Screen() creates a window where the game will be displayed.
-#The title, background color, and window size are set using .title(), .bgcolor(), and .setup().
-#.tracer(0) turns off automatic screen updates to allow smoother animations when updated manually.
+#turtle.Screen() creates a window where the game will be displayed on line 13.
+#.tracer(0) turns off automatic screen updates to allow smoother animations when updated manually on line 20.
+#The title and background color are set using .title(), .bgcolor().
 
 
-#Task 1: Import the turtle module using the import command.
+# Task 1: Set the title of the window on line 14.
+# Task 2: Set the background color on line 15.
 
-#Task 2: Create a screen object using turtle.Screen() and store in a screen variable.
+# Import the turtle module
+import turtle
 
-#Task 3: Set the title to "Fruit Catcher Game" using .title().
+screen = turtle.Screen()
 
-#Task 4: Change the background color to lightblue.
 
-#Task 5: Set the window size using .setup(width=800, height=600).
+# Set the window size
+screen.setup(width=800, height=600)
 
-#Task 6: Turn off automatic screen updates by screen.tracer(0).
-
+# Turn off automatic screen updates
+screen.tracer(0)
