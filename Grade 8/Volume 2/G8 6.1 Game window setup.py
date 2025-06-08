@@ -1,41 +1,33 @@
-# Basic Setup & Initialization
-
-# Task 1: Import the pygame module and initialize the module on lines 11 & 12.
-# Task 2: Create variables - SCREEN_HEIGHT and SCREEN_WIDTH with 600 and 400 as values on line 14 & 15.
-# Task 3: Define variables for WHITE, BLACK, and SKY_BLUE (153, 217, 234) colors on lines 17,18 & 19, respectively.
-# Task 4: Create the pygame screen variable using set_mode() on line 21.
-# Task 5: Set the title of the pygame window to 'Sky Jump' on line 23.
-# Task 6: Write the event handler loop to handle the QUIT event within the while loop on lines 34 to 37.
-
-# Import the pygame module 
+# The code creates a 400x600 game window titled "Sky Jumper" using Pygame.
+# It runs a loop to keep the window open and listens for the close event.
+# Each frame, it fills the screen with light blue and updates the display until the window is closed.
 
 
-# screen variables
+Task 1: Change the window title to your name.
+Task 2: Change the background color to another RGB color, like yellow or pink.
 
+import pygame  # Import the pygame module
+pygame.init()  # Initialize all pygame modules
 
-# color variables
+# Create the game window with width 400 and height 600
+screen = pygame.display.set_mode((400, 600))
 
+# Set the title of the game window
+pygame.display.set_caption("Sky Jumper")
 
-
-# Create a pygame screen
-
-# Set the title of the screen
-
-#set frame rate
-clock = pygame.time.Clock()
-FPS = 60
-
+# Variable to control the game loop
 run = True
 while run:
+    # Check for events like closing the window
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
 
-	clock.tick(FPS)
+    # Fill the screen with a light blue color
+    screen.fill((153, 217, 234))
 
-	#for loop to handle the QUIT event
+    # Update the display with the latest changes
+    pygame.display.update()
 
-
-
-
-	#update display window
-	pygame.display.update()
-
+# Quit pygame when the loop ends
 pygame.quit()
