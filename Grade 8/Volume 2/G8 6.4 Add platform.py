@@ -43,6 +43,11 @@ while run:
     if keys[pygame.K_SPACE]:
         player.y -= 50  # Move player up
 
+    # --- Restrict player from moving off the screen ---
+    if player.x < 0:
+        player.x = 0
+    if player.x > 400 - player.width:
+        player.x = 400 - player.width
     # Fill the screen with a light blue color
     screen.fill((153, 217, 234))
 
