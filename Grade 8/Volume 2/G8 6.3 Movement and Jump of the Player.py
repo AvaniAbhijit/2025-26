@@ -1,7 +1,8 @@
 # The player moves left or right when the arrow keys are pressed by changing its x position.
 # When the spacebar is pressed, the player jumps up by decreasing their y position (moves upward).
 
-# Task 1: Write the code to move the player right on line 37.
+# Task 1: Write the code to move the player right on line 38.
+# Task 2: Write the code to prevent the player from moving left out off the screen on line 41 & 42.
 
 import pygame  # Import the pygame module
 pygame.init()  # Initialize all pygame modules
@@ -34,9 +35,15 @@ while run:
         player.x -= 5
 
     # Move player right
+    
 
-
-	
+    # Prevent the player from moving off the left edge
+    
+    
+    # Prevent the player from moving off the right edge (window width - player width)
+    if player.x > 400 - player.width:
+        player.x = 400 - player.width
+    
     # Jump when spacebar is pressed (move up once)
     if keys[pygame.K_SPACE]:
         player.y -= 50  # Move player up
