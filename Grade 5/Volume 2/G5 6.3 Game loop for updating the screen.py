@@ -1,12 +1,10 @@
-# The while loop here is a game loop.
+# The while loop here is a game loop on line 27.
 # It keeps running as long as the condition game_on is True.
-# Inside the loop, screen.update() is called to refresh/redraw the game window continuously.
+# Inside the loop, screen.update() is called to refresh/redraw the game window continuously on line 29.
 # This allows any changes you make (like moving the basket or falling fruits) to be shown live.
 # The loop runs indefinitely because game_on is initially set to True and never changed inside the loop.
 
 #Task 1: Run the code and observe the output.
-#Task 2: Change the size and position of the basket.
-#Task 3: Change game_on to False on line no 26.
 
 import turtle
 screen = turtle.Screen()
