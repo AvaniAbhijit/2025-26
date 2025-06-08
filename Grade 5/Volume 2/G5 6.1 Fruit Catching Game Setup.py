@@ -10,11 +10,12 @@
 # Import the turtle module
 import turtle
 
-screen = turtle.Screen()
-
+screen = turtle.Screen()   # This creates the game window
+                           # Sets the title at the top of the window
+                           # Changes the background color of the window
 
 # Set the window size
-screen.setup(width=800, height=600)
+screen.setup(width=800, height=600)  # Sets the width and height of the game window
 
 # Turn off automatic screen updates
-screen.tracer(0)
+screen.tracer(0)                    # Disables automatic updates to allow manual refreshing (smoother animations)
