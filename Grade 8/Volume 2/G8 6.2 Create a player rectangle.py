@@ -1,3 +1,10 @@
+# player = pygame.Rect(180, 500, 40, 50) creates a rectangle for the player 
+# at position (180, 500) with a width of 40 and height of 50 pixels on line 18.
+# It is used to draw and move the player in the game.
+
+# Task: Draw the player on the screen by calling the function pygame.draw.rect() 
+# and passing the parameters: screen, color, and player rectangle on line 32.
+
 import pygame  # Import the pygame module
 pygame.init()  # Initialize all pygame modules
 
@@ -22,7 +29,7 @@ while run:
     screen.fill((153, 217, 234))
 
     # Draw the player as a red rectangle on the screen
-    pygame.draw.rect(screen, (255, 0, 0), player)
+    
 
     # Update the display with the latest changes
     pygame.display.update()
