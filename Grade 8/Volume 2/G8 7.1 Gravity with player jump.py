@@ -3,7 +3,7 @@
 # When the spacebar is pressed and the player is standing on the platform, the player jumps.
 # A negative vel_y moves the player up on line 51.
 
-# Task 1: Make vel_y positive and run the code, observe the output.
+# Task 1: Change the value for gravity on line 22.
 
 
 import pygame  # Import the pygame module
