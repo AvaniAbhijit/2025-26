@@ -1,3 +1,8 @@
+# On line 16 - The filetypes=[("Excel files", "*.xlsx;*.xls")] restricts the selection to only Excel files.
+# This helps ensure users choose valid .xlsx or .xls files for processing.
+
+# Task: Update the file selection feature to allow the user to choose PDF and Text files, instead of Excel files.
+#         Hint: PDF files (*.pdf) , Text files (*.txt)
 
 from tkinter import filedialog
 import tkinter as tk
@@ -7,7 +12,7 @@ def update(*args):
     date_label.config(text="Selected date is "+date_var.get())
 
 def select_file():
-    #specifying that excel files should be openend
+    #specifying that Excel files should be opened
     selected_file = filedialog.askopenfilename(filetypes=[("Excel files", "*.xlsx;*.xls")])
     print("Selected file:", selected_file)
 
