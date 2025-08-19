@@ -15,7 +15,7 @@ def update(*args):
     date_label.config(text="Selected date is "+date_var.get())
 
 def select_file():
-    selected_file = filedialog.askopenfilename(filetypes=[("Excel files", "*.xlsx;*.xls")])
+    selected_file = filedialog.askopenfilename(filetypes=[("Excel files", "*.xlsx")])
     print("Selected file:", selected_file)
 
 def mark_attendance():#defining function to open images
@@ -42,18 +42,19 @@ date_entry.pack(pady=5)
 date_var.trace('w', update)
 
 button1 = tk.Button(root, text="Select Excel File",width=20,height=2,bg="#B4A3D8",activebackground="grey",activeforeground="white",command=select_file)
-button1.config(bd = 5,relief="solid")
+button1.config(highlightbackground = "black",highlightthickness=3)
 button1.pack(pady=10)
 
 button2=tk.Button(root,text="Upload Photo",width=20,height=2,bg="#B4A3D8",activebackground="grey",activeforeground="white",command=mark_attendance)#calling the function using command
-button2.config(bd = 5,relief="solid")
+button2.config(highlightbackground = "black",highlightthickness=3)
 button2.pack(pady=10)
 
 text_widget = tk.Text(root,width=50,height=5,spacing1=5,spacing2=5,spacing3=5,state="disabled")
 
 text_widget.pack(pady=10)
 
-submit=tk.Button(root,text="Submit",width=20,height=2,bg="black",fg="white",activebackground="blue",activeforeground="white")
+submit=tk.Button(root,text="Submit",width=20,height=2,bg="#B4A3D8",activebackground="blue",activeforeground="white")
+submit.config(highlightbackground = "black",highlightthickness=3)
 submit.pack(pady=10)
 
 root.mainloop()
