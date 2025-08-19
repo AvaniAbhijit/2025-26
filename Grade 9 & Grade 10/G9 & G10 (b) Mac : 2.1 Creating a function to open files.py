@@ -51,5 +51,6 @@ text_widget = tk.Text(root,width=50,height=5,spacing1=5,spacing2=5,spacing3=5,st
 
 text_widget.pack(pady=10)
 
-submit=tk.Button(root,text="Submit",width=20,height=2,bg="black",fg="white",activebackground="blue",activeforeground="white")
+submit=tk.Button(root,text="Submit",width=20,height=2,bg="#B4A3D8",activebackground="blue",activeforeground="white")
+submit.config(highlightbackground = "black",highlightthickness=3)
 submit.pack(pady=10)
