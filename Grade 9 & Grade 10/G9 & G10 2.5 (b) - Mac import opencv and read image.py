@@ -3,7 +3,7 @@
 
 import pytesseract
 import cv2 #importing opencv
-pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract
+pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
 image_file="image.png"
 #This reads the image file using OpenCV, treating it as an array of pixels.
 image = cv2.imread(image_file)
