@@ -3,7 +3,7 @@
 
 
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd=r'/usr/local/bin/tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract
 #add the name of image file (ensure that image and file are saved in same directory)
 image_file="image.png"
 #extract text from the image using pytesseract
