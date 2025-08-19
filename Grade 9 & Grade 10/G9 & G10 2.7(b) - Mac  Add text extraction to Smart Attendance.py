@@ -14,19 +14,19 @@ def update(*args):
     date_label.config(text="Selected date is "+date_var.get())
 
 def select_file():
-    selected_file = filedialog.askopenfilename(filetypes=[("Excel files", "*.xlsx;*.xls")])
+    selected_file = filedialog.askopenfilename(filetypes=[("Excel files", "*.xlsx")])
     print("Selected file:", selected_file)
 
 #Define function to perform extraction for image selected by user
 def extract_text_from_image(image_file_path):
-        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+        pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
         image = cv2.imread(image_file_path)
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         extracted_text = pytesseract.image_to_string(gray)
         return extracted_text #return the extracted text
 
 def mark_attendance():
-    image_file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg")])
+    image_file_path = filedialog.askopenfilename(filetypes=[("PNG files", "*.PNG")])
     if not image_file_path:
         print("No image selected.")
         return
@@ -62,7 +62,8 @@ text_widget = tk.Text(root,width=50,height=5,spacing1=5,spacing2=5,spacing3=5,st
 
 text_widget.pack(pady=10)
 
-submit=tk.Button(root,text="Submit",width=20,height=2,bg="black",fg="white",activebackground="blue",activeforeground="white")
+submit=tk.Button(root,text="Submit",width=20,height=2,bg="#B4A3D8",activebackground="blue",activeforeground="white")
+submit.config(highlightbackground = "black",highlightthickness=3)
 submit.pack(pady=10)
 
 root.mainloop()
